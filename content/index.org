@@ -1,14 +1,22 @@
-#+title: Org Mode Example Site
+#+title: Linux User's Group @ UIC
+#+OPTIONS: toc:nil
 
-* Overview
+* Welcome
 
-This is an *example* of a _website_ written with [[https://orgmode.org][Org Mode]]!
+This is the website of the ~Linux User's Group~ at UIC.
 
-Here is a link to my [[./Emacs.org][Emacs configuration]].
+Make sure to bookmark this page to easily find our guides on common Linux tools!
+This website is designed to be as lightweight as possible. No Javascript bloat!
 
 * Links
 
-- [[https://systemcrafters.net][System Crafters Official Site]]
-- [[https://youtube.com/SystemCrafters][System Crafters on YouTube]]
-- [[https://twitch.com/SystemCrafters][System Crafters on Twitch]]
-- [[https://twitter.com/SystemCrafters][System Crafters on Twitter]]
+- [[https://discord.gg/Edrb8ASX7m][LUG Discord]]
+
+  #+BEGIN_SRC emacs-lisp :exports results
+
+    (directory-files-recursively ".." "[a-zA-Z]*\.org$")
+
+  #+END_SRC
+
+  #+RESULTS:
+  | ../content/Emacs.org | ../content/index.org |
