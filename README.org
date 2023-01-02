@@ -1,0 +1,41 @@
+#+TITLE: New LUG Website
+#+AUTHOR: Soham S Gumaste
+#+DATE: <2023-01-02 Mon>
+
+* New Website Goals
+
+- As minimal as possible.
+- Prefer text, ASCII.
+- Link images instead of embed for fastest possible load time.
+- **Absolutely no JavaScript**
+
+
+* Contributing Guide
+
+- Write articles as *org* files. [Supported in VScode (citation needed)]
+- Refer existing pages as a template.
+- One topic per heading.
+- Prioritize searchability and referencing over long explanations.
+- New Website is automatically built and deployed from the ~main~ branch.
+
+* FAQ
+
+** 1. Why Emacs to build a website? Isn't it just a text editor?
+
+Emacs ~org-mode~ is everything from a time-tracking tasklist to a literate programming environment like Jupyter. It comes with a publishing feature. Learn more about the power of Emacs and org-mode in your own time :D.
+
+** 2. What if I want to write in markdown?
+
+Use =pandoc= to convert, then add the relevant header material like `#+TITLE:` etc. You are missing out though.
+
+** 3. Do I have to use Emacs?
+
+No, but you should.
+
+** B-b-but I HATE emacs I use vimerino which is CLEARLY better!!!!
+
+Cope.
+
+* License
+
+MIT
