@@ -25,7 +25,7 @@
 ;; Define the publishing project
 (setq org-publish-project-alist
       (list
-       (list "org-site:main"
+       (list "lug@uic"
              :recursive t
              :base-directory "./content"
              :publishing-function 'org-html-publish-to-html
@@ -35,7 +35,10 @@
              :with-creator t            ;; Include Emacs and Org versions in footer
              :with-toc t                ;; Include a table of contents
              :section-numbers nil       ;; Don't include section numbers
-             :time-stamp-file t)))    ;; Don't include time stamp in file
+             :time-stamp-file t
+	     :makeindex nil
+	     :auto-sitemap t
+	     :sitemap-title "")))    ;; Don't include time stamp in file
 
 ;; Generate the site output
 (org-publish-all t)

@@ -1,0 +1,9 @@
+#+TITLE: A Guide to Git
+#+DATE: <2023-01-02 Mon>
+#+AUTHOR: Soham S Gumaste
+#+EMAIL: sgumas2@uic.edu
+#+INDEX: Git
+
+* TODO: Write this document
+
+lmao
