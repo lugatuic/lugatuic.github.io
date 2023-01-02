@@ -11,12 +11,3 @@ This website is designed to be as lightweight as possible. No Javascript bloat!
 * Links
 
 - [[https://discord.gg/Edrb8ASX7m][LUG Discord]]
-
-  #+BEGIN_SRC emacs-lisp :exports results
-
-    (directory-files-recursively ".." "[a-zA-Z]*\.org$")
-
-  #+END_SRC
-
-  #+RESULTS:
-  | ../content/Emacs.org | ../content/index.org |
