@@ -13,7 +13,7 @@ It is surprisingly easy to contribute to this website.
 
     1. Get a text editing environment with support for org mode.
        Options include the obvious GNU Emacs but also
-       =VS Code= with [[https://marketplace.visualstudio.com/items?itemName=tootone.org-mode][an extension]] or =Vim= by [[https://github.com/jceb/vim-orgmode][committing heresy]]
+       =VS Code= with [[https://marketplace.visualstudio.com/items?itemName=tootone.org-mode][an extension]] or =Vim= by [[https://github.com/jceb/vim-orgmode][committing heresy]].
 
     2. Be familiar with [[file:content/git.org][Git]].
 
@@ -38,4 +38,4 @@ It is surprisingly easy to contribute to this website.
 * Licensing
 
 By contributing, you agree to release your work under the same license as the entire project.
-This project is licensed =MIT= and may be changed by the LUG Administration with or wihtout notice.
+This project is licensed =MIT= and may be changed by the LUG Administration with or without notice.
