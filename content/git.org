@@ -15,7 +15,7 @@
    :CUSTOM_ID: basic-git-workflow
    :END:
 #+caption: Git Workflow
-[[file:images/git-workflow.png][Workflow]]
+[[file:images/git-workflow.png]]
 
 Image source: /https://backlog.com/git-tutorial/git-workflow//
 
