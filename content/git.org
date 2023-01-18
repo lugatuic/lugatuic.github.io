@@ -1,3 +1,5 @@
+#+TITLE: Introduction to Git 
+
 * Git Internals and SHA
 ** Some Git Terms
    :PROPERTIES:
