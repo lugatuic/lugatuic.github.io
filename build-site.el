@@ -24,21 +24,27 @@
 
 ;; Define the publishing project
 (setq org-publish-project-alist
-      (list
-       (list "lug@uic"
-             :recursive t
-             :base-directory "./content"
-             :publishing-function 'org-html-publish-to-html
-             :publishing-directory "./public"
-	     :html-use-infojs nil ;; No JS bloatware, thanks.
-             :with-author nil           ;; Don't include author name
-             :with-creator t            ;; Include Emacs and Org versions in footer
-             :with-toc t                ;; Include a table of contents
-             :section-numbers nil       ;; Don't include section numbers
-             :time-stamp-file t
-	     :makeindex nil
-	     :auto-sitemap t
-	     :sitemap-title "")))    ;; Don't include time stamp in file
+      '(("lug@uic"
+         :recursive t
+         :base-directory "./content"
+	 :base-extension "org"
+         :publishing-function org-html-publish-to-html
+         :publishing-directory "./public"
+	 :html-use-infojs nil ;; No JS bloatware, thanks.
+         :with-author nil           ;; Don't include author name
+         :with-creator t            ;; Include Emacs and Org versions in footer
+         :with-toc t                ;; Include a table of contents
+         :section-numbers nil       ;; Don't include section numbers
+         :time-stamp-file t
+	 :makeindex nil
+	 :auto-sitemap t
+	 :sitemap-title "")
+	("lug-static"
+	 :base-directory "./content"
+	 :base-extension "png"
+	 :publishing-directory "./public"
+	 :publishing-function org-publish-attachment
+	 :recursive t)))    ;; Don't include time stamp in file
 
 ;; Generate the site output
 (org-publish-all t)

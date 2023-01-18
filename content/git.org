@@ -1,9 +1,145 @@
-#+TITLE: A Guide to Git
-#+DATE: <2023-01-02 Mon>
-#+AUTHOR: Soham S Gumaste
-#+EMAIL: sgumas2@uic.edu
-#+INDEX: Git
+* Git Internals and SHA
+** Some Git Terms
+   :PROPERTIES:
+   :CUSTOM_ID: some-git-terms
+   :END:
+- Untracked files: New files that Git has not tracked.
+- Working area: Modified files/changes that are un-committed.
+- Staging area: Modified files/changes that are marked to go into the
+  next commit.
+- Local repo: Local copy of the repository
+- Remote repo: Hosted repository on GitHub, GitLab, etc.
 
-* TODO: Write this document
+** Basic Git Workflow
+   :PROPERTIES:
+   :CUSTOM_ID: basic-git-workflow
+   :END:
+#+caption: Git Workflow
+[[file:images/git-workflow.png][Workflow]]
 
-lmao
+Image source: /https://backlog.com/git-tutorial/git-workflow//
+
+** Git Basics
+   :PROPERTIES:
+   :CUSTOM_ID: git-basics
+   :END:
+Here is a cool webapp to visualizing Git stuffs:
+http://git-school.github.io/visualizing-git/
+
+*** A very good guide to Git basics
+    :PROPERTIES:
+    :CUSTOM_ID: a-very-good-guide-to-git-basics
+    :END:
+[[https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository][Pro
+Git - Chapter 2]]
+
+*** Command Reference
+    :PROPERTIES:
+    :CUSTOM_ID: command-reference
+    :END:
+[[https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Getting-and-Creating-Projects][Pro
+Git - A3.2 Appendix C]]
+
+** How does Git work?
+   :PROPERTIES:
+   :CUSTOM_ID: how-does-git-work
+   :END:
+Inside Git, everything is an object.
+
+*** Git objects
+    :PROPERTIES:
+    :CUSTOM_ID: git-objects
+    :END:
+Everything in Git is represented in a few basic objects stored in the
+file system in the =.git= directory.
+
+**** Blob
+     :PROPERTIES:
+     :CUSTOM_ID: blob
+     :END:
+- Data (code, pictures, etc.)
+
+**** Tree
+     :PROPERTIES:
+     :CUSTOM_ID: tree
+     :END:
+- Pointers to files, content and other trees
+
+#+caption: Git Tree
+[[file:images/git-tree.png]]
+
+Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
+
+**** Commit
+     :PROPERTIES:
+     :CUSTOM_ID: commit
+     :END:
+- Author
+- Message
+- Pointer to a tree
+- Pointer to parent
+
+#+caption: Git Commit
+[[file:images/git-commit.png]]
+
+Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
+
+**** Ref (aka tag, branch, etc.)
+- Pointer to a commit
+
+#+caption: Git References
+[[file:images/git-ref.png]]
+
+Image source:
+/https://git-scm.com/book/en/v2/Git-Internals-Git-References/
+
+**** Read more
+     :PROPERTIES:
+     :CUSTOM_ID: read-more
+     :END:
+- [[https://git-scm.com/book/en/v2/Git-Internals-Git-Objects][Pro Git -
+  10.2 Git Internals - Git Objects]]
+- [[https://git-scm.com/book/en/v2/Git-Internals-Git-References][Pro
+  Git - 10.3 Git Internals - Git References]]
+
+*** Git and Graphs
+    :PROPERTIES:
+    :CUSTOM_ID: git-and-graphs
+    :END:
+A Git repository is essentially a giant
+[[https://en.wikipedia.org/wiki/Directed_acyclic_graph][directed acyclic
+graph (DAG)]].
+
+*** SHA1
+    :PROPERTIES:
+    :CUSTOM_ID: sha1
+    :END:
+Every object is stored on disk and has a SHA-1 hash as the filename.
+
+**** But isn't SHA1 insecure?
+     :PROPERTIES:
+     :CUSTOM_ID: but-isnt-sha1-insecure
+     :END:
+Yes, but that does not matter in this context. Git uses SHA1 to keep
+track of data and check integrity. It is still a good hashing algorithm
+with a very-very low collision rate.
+
+*** Content is King
+    :PROPERTIES:
+    :CUSTOM_ID: content-is-king
+    :END:
+Git is very smart. It does not keep track of files, it keeps track of
+the content. If you create 1000000000000 files with the same content, it
+will only create 1 blob. Also works if you create 2 files with the same
+content. :wink:
+
+** Learn more about Git
+   :PROPERTIES:
+   :CUSTOM_ID: learn-more-about-git
+   :END:
+- https://github.com/pluralsight/git-internals-pdf
+- http://rogerdudler.github.io/git-guide/
+- https://matthew-brett.github.io/curious-git/index.html
+- http://git-school.github.io/visualizing-git/
+- https://git-scm.com/book/en/v2
+- https://git-scm.com/docs
