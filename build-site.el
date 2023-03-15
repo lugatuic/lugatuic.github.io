@@ -12,6 +12,9 @@
 
 ;; Install dependencies
 (package-install 'htmlize)
+;; (package-install 'ox-rss)
+(add-to-list 'load-path ".")
+(require 'sg-ox-rss)
 
 ;; Load the publishing system
 (require 'ox-publish)
@@ -37,14 +40,25 @@
          :section-numbers nil       ;; Don't include section numbers
          :time-stamp-file t
 	 :makeindex nil
+	 :exclude "events.org"
 	 :auto-sitemap t
 	 :sitemap-title "")
 	("lug-static"
 	 :base-directory "./content"
-	 :base-extension "png"
+	 :base-extension '("png" "xsl")
 	 :publishing-directory "./public"
 	 :publishing-function org-publish-attachment
-	 :recursive t)))    ;; Don't include time stamp in file
+	 :recursive t)
+	("blog-rss"
+	 :base-directory "./content"
+	 :base-extension "org"
+	 :html-link-use-abs-url t
+	 :exclude ".*"
+	 :include ("events.org")
+	 :table-of-contents nil
+	 :rss-stylesheet "./style.xsl"
+	 :publishing-function org-rss-publish-to-rss
+	 :publishing-directory "./public")))    ;; Don't include time stamp in file
 
 ;; Generate the site output
 (org-publish-all t)
