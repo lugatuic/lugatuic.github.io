@@ -1,11 +1,12 @@
 #+AUTHOR: Linux Users Groups
 #+RSS_IMAGE_URL:
 
+# Newest first!
 
-* Test Title
+* Board Game Night!
 :PROPERTIES:
-:ID:       a8c69b36-4e98-420d-a335-2f2a423d057c
-:PUBDATE:  2023-03-15 Wed 16:45
-:AUTHOR: Soham
+:ID:       54bf545b-bd3e-4162-8910-e8989a4a509e
+:PUBDATE:  2023-03-15 Wed 19:22
 :END:
-This is a test title.
+Join us for a **board game night** at __5pm__ this ~Thursday~.
+Join the [[https://discord.gg/Edrb8ASX7m][discord]] to stay in touch!
