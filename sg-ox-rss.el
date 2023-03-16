@@ -300,7 +300,8 @@ as a communication channel."
    (format "<?xml version=\"1.0\" encoding=\"%s\"?>"
 	   (symbol-name org-html-coding-system))
    (if (plist-get info :rss-stylesheet)
-	   (format "<?xml-stylesheet href=\"%s\" type=\"text/xsl\"?>" (plist-get info :rss-stylesheet)))
+	   (format "<?xml-stylesheet href=\"%s\" type=\"text/xsl\"?>"
+			   (plist-get info :rss-stylesheet)))
    "\n<rss version=\"2.0\"
 	xmlns:content=\"http://purl.org/rss/1.0/modules/content/\"
 	xmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"
