@@ -45,7 +45,7 @@
 	 :sitemap-title "")
 	("lug-static"
 	 :base-directory "./content"
-	 :base-extension '("png" "xsl")
+	 :base-extension '("png" "xsl" "svg")
 	 :publishing-directory "./public"
 	 :publishing-function org-publish-attachment
 	 :recursive t)
