@@ -45,20 +45,21 @@
 	 :sitemap-title "")
 	("lug-static"
 	 :base-directory "./content"
-	 :base-extension '("png" "xsl" "svg")
+	 :base-extension "png\\|css\\|xsl\\|xml\\|ico"
 	 :publishing-directory "./public"
 	 :publishing-function org-publish-attachment
 	 :recursive t)
-	("blog-rss"
-	 :base-directory "./content"
-	 :base-extension "org"
-	 :html-link-use-abs-url t
-	 :exclude ".*"
-	 :include ("events.org")
-	 :table-of-contents nil
-	 :rss-stylesheet "./style.xsl"
-	 :publishing-function org-rss-publish-to-rss
-	 :publishing-directory "./public")))    ;; Don't include time stamp in file
+	;; ("blog-rss"
+	;;  :base-directory "./content"
+	;;  :base-extension "org"
+	;;  :html-link-use-abs-url t
+	;;  :exclude ".*"
+	;;  :include ("events.org")
+	;;  :table-of-contents nil
+	;;  :rss-stylesheet "./style.xsl"
+	;;  :publishing-function org-rss-publish-to-rss
+	;;  :publishing-directory "./public")
+	))    ;; Don't include time stamp in file
 
 ;; Generate the site output
 (org-publish-all t)
