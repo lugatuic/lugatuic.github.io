@@ -37,7 +37,7 @@ xmlns:atom="http://www.w3.org/2005/Atom">
             <xsl:value-of select="summary" />
           </title>
           <pubDate>
-            <!-- FUCK RFC822, RFC DOESN'T EVEN IMPLEMENT IT RIGHT -->
+            <!-- FUCK RFC822, RSS DOESN'T EVEN IMPLEMENT IT RIGHT -->
             <xsl:value-of select="substring($days, ($dayofweek + 1) * 3, 3)"/>
             <xsl:text>, </xsl:text>
             <xsl:value-of select="$day"/>
