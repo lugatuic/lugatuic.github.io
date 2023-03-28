@@ -16,7 +16,7 @@ Make sure to join the [[https://discord.gg/Edrb8ASX7m][LUG Discord]]!
 Want to write an article here? Head over to the [[file:contributing.org][contributing guide]].
 
 # Maybe not have this hardcoded...
-Get updates on the latest happenings at [[https://lug.cs.uic.edu/events.xml][the RSS Feed!]]
+Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).
 
 #+HTML: <img src="logo.svg" width="200" height="100" />
 
