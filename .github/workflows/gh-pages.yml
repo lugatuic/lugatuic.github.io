@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-#  schedule:
-#    - cron: "0 * * * *"
+  schedule:
+    - cron: "0 * * * *"
 
 jobs:
   publish:
@@ -28,3 +28,5 @@ jobs:
         with:
           branch: gh-pages
           folder: public
+          git-config-user: "gh-runner"
+          git-config-email: "gh@example.com"
