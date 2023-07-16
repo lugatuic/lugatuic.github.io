@@ -6,6 +6,9 @@ curl "https://uic.campusgroups.com/ics?uid=6e5c8fe1-dbbd-11ed-902f-0e3e5d452619&
 # CRLF<space> is used to fold long lines
 sed -z "s/\r\n //g" |
 
+# Remove empty lines
+sed -i "/^$/d"
+
 # Black magic
 gawk -E script.awk |
 
