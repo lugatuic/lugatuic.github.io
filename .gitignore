@@ -224,3 +224,4 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/hugo,linux,emacs,node
 
 .packages/
+.direnv
