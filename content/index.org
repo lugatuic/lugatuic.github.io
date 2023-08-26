@@ -3,6 +3,7 @@
 #+DATE: <2023-01-02 Mon>
 #+OPTIONS: toc:nil
 
+#+HTML: <img src="logo.svg" width="500" height="200" />
 
 * Welcome
 
@@ -18,7 +19,6 @@ Want to write an article here? Head over to the [[file:contributing.org][contrib
 # Maybe not have this hardcoded...
 Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).
 
-#+HTML: <img src="logo.svg" width="200" height="100" />
 
 * Content
 
