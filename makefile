@@ -22,6 +22,7 @@ PANDOC_FLAGS += -s
 define MAKE_HTML
 
 public/%.html: $(join content/%, $(1))
+	@mkdir -p ./public
 	pandoc $(PANDOC_FLAGS) $$^ -o $$@
 
 endef
