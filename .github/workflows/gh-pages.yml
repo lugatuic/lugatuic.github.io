@@ -14,14 +14,14 @@ jobs:
       - name: Check out
         uses: actions/checkout@v1
 
-      - name: Install Emacs
-        run: sudo apt install emacs-nox --yes
+      - name: Install pandoc and make
+        run: sudo apt install pandoc make --yes
         
       - name: Install XSLTProc
         run: sudo apt install xsltproc
         
-      - name: Build the site
-        run: ./build.sh
+      - name: One Make to Rule them all
+        run: make all
 
       - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4

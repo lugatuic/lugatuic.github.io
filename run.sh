@@ -19,4 +19,4 @@ gawk -E script.awk |
 sed 's/\r//g' > public/events.xml
 
 # Generate rss feed
-xsltproc content/rss.xsl public/events.xml > public/rss.xml
+xsltproc content/static/rss.xsl public/events.xml > public/rss.xml
