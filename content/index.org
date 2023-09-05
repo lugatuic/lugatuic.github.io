@@ -1,6 +1,5 @@
 #+title: Linux User's Group @ UIC
 #+AUTHOR: Soham S Gumaste
-#+DATE: <2023-01-02 Mon>
 #+OPTIONS: toc:nil
 
 #+HTML: <img src="static/logo.svg" width="500" height="200" />
@@ -20,7 +19,7 @@ Make sure to join the [[https://discord.gg/Edrb8ASX7m][LUG Discord!]]
 </div>
 #+END_EXPORT
 
-Want to write an article here? Head over to the [[file:contributing.org][contributing guide]].
+Want to write an article here? Head over to the [[http:/contributing][contributing guide]].
 
 # Maybe not have this hardcoded...
 Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).

@@ -17,9 +17,6 @@ $if(description-meta)$
   <meta name="description" content="$description-meta$" />
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-  <style>
-    $styles.html()$
-  </style>
 $for(css)$
   <link rel="stylesheet" href="$css$" />
 $endfor$
@@ -33,6 +30,7 @@ $endif$
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
 </head>
 <body>
 $for(include-before)$

@@ -10,9 +10,11 @@ FILES := $(foreach e, $(EXT), $(wildcard ./content/*$(e)))
 FILES_BASE := $(basename $(FILES))
 HTMLFILES := $(patsubst ./content/%, ./public/%.html, $(FILES_BASE))
 # HTMLFILES := $(notdir $(HTMLFILES))
-PANDOC_FLAGS := --metadata-file metadata.yaml
-PANDOC_FLAGS += --template template.html
+PANDOC_FLAGS := --template template.html
+# PANDOC_FLAGS := --metadata-file metadata.yaml
 PANDOC_FLAGS += -s
+
+PANDOC := pandoc $(PANDOC_FLAGS)
 
 
 # ${info FILES IS $(FILES)}
@@ -23,7 +25,7 @@ define MAKE_HTML
 
 public/%.html: $(join content/%, $(1))
 	@mkdir -p ./public
-	pandoc $(PANDOC_FLAGS) $$^ -o $$@
+	$(PANDOC) $$^ -o $$@
 
 endef
 
