@@ -16,8 +16,8 @@ sed "/^$/d" |
 gawk -E script.awk |
 
 # \n is better anyway
-sed 's/\r//g' > public/events_raw.xml
+sed 's/\r//g' > public/events.xml
 
 # Generate rss feed
-xsltproc content/static/rss.xsl public/events_raw.xml > public/rss.xml
-xsltproc content/static/style.xsl public/events_raw.xml > public/events.xml
+xsltproc content/static/rss.xsl public/events.xml > public/rss.xml
+# xsltproc content/static/style.xsl public/events_raw.xml > public/events.xml

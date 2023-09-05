@@ -1,7 +1,7 @@
 BEGIN {
 	FS=":";
 	print "<?xml version='1.0' encoding='UTF-8' ?>"
-	print "<?xml-stylesheet type=\"text/xsl\" href=\"/style.xsl\" ?>"
+	print "<?xml-stylesheet type=\"text/xsl\" href=\"/static/style.xsl\" ?>"
 
 	
 }
