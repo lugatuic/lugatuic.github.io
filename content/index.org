@@ -19,8 +19,6 @@ Make sure to join the [[https://discord.gg/Edrb8ASX7m][LUG Discord!]]
 </div>
 #+END_EXPORT
 
-Want to write an article here? Head over to the [[http:/contributing][contributing guide]].
-
 # Maybe not have this hardcoded...
 Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).
 
