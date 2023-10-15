@@ -11,7 +11,8 @@ This is the website of the ~Linux User's Group~ at UIC.
 Make sure to bookmark this page to easily find our guides on common Linux tools!
 This website is designed to be as lightweight as possible. No Javascript bloat!
 
-Make sure to join the [[https://discord.gg/Edrb8ASX7m][LUG Discord!]]
+Make sure to join the @@html:<a href="https://discord.gg/Edrb8ASX7m">LUG Discord!</a>@@
+
 #+BEGIN_EXPORT html
 <div>
 <a href="https://discord.gg/Edrb8ASX7m"><img width="400"
@@ -21,7 +22,6 @@ Make sure to join the [[https://discord.gg/Edrb8ASX7m][LUG Discord!]]
 
 # Maybe not have this hardcoded...
 Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).
-
 
 * Content
 [[file:sitemap.html][Sitemap]]
