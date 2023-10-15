@@ -6,16 +6,27 @@ vpath %.html ./public
 
 EXT := .org .md
 
-FILES := $(foreach e, $(EXT), $(wildcard ./content/*$(e)))
+EXT_FIND := $(foreach e, $(EXT), -name "*$(e)" -o)
+
+EXT_FIND2 := $(shell E="$(EXT_FIND)"; echo "$${E%*-o}")
+
+${info EXT_FIND $(EXT_FIND2)}
+
+FILES  := $(shell find content -type f \( $(EXT_FIND2) \) -print )
 FILES_BASE := $(basename $(FILES))
-HTMLFILES := $(patsubst ./content/%, ./public/%.html, $(FILES_BASE))
-# HTMLFILES := $(notdir $(HTMLFILES))
+HTMLFILES := $(patsubst content/%, public/%.html, $(FILES_BASE))
 PANDOC_FLAGS := --template template.html
-# PANDOC_FLAGS := --metadata-file metadata.yaml
 PANDOC_FLAGS += -s
 
 PANDOC := pandoc $(PANDOC_FLAGS)
 
+DIRS_CONTENT := $(shell find content ! -path content -type d)
+DIRS_PUBLIC := $(patsubst content/%, public/%, $(DIRS_CONTENT))
+
+# ${info DIRS PUBLIC $(DIRS_PUBLIC)}
+# ${info DIRS CONTENT $(DIRS_CONTENT)}
+
+$(foreach d, $(DIRS_PUBLIC), $(shell mkdir -p $(d)))
 
 # ${info FILES IS $(FILES)}
 # ${info HTMLFILES IS $(HTMLFILES)}
@@ -24,12 +35,11 @@ PANDOC := pandoc $(PANDOC_FLAGS)
 define MAKE_HTML
 
 public/%.html: $(join content/%, $(1))
-	@mkdir -p ./public
 	$(PANDOC) $$^ -o $$@
 
 endef
 
-# ${info RULES: $(foreach i, $(EXT), $(call MAKE_HTML, $(i)))}
+${info RULES: $(foreach i, $(EXT), $(call MAKE_HTML, $(i)))}
 
 $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 
