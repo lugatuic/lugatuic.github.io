@@ -44,8 +44,8 @@ all: $(HTMLFILES)
 	    echo "<a href=\"$$F\">$$(basename -s .html $$F)</a><br />" >> public/sitemap.html; \
 	done
 	cat sitemap.tail.html >> public/sitemap.html
-	echo "Running run.sh..."
-	$(shell ./run.sh)
+	echo "Running calendar.sh..."
+	$(shell ./calendar.sh)
 
 clean:
 	rm -rf public/*
