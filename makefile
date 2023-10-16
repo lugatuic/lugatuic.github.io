@@ -1,41 +1,48 @@
-vpath
-vpath % ./content
-vpath %.html ./public
-
 .PHONY: all clean
 
+# Define desired extensions here.
 EXT := .org .md
 
+# Name of content folder
+CONTENT := content 
+# Name of output/public folder
+PUBLIC := public
+
+# Sanitize
+CONTENT := $(strip $(CONTENT))
+PUBLIC := $(strip $(PUBLIC))
+
+# Convert extensions to `find` command syntax
 EXT_FIND := $(foreach e, $(EXT), -name \"*$(e)\" -o)
+EXT_FIND := $(shell E="$(EXT_FIND)"; echo "$${E%*-o}")
+# the first foreach adds an extra -o
 
-# Need to remove the last -o 
-EXT_FIND2 := $(shell E="$(EXT_FIND)"; echo "$${E%*-o}")
+${info EXT_FIND $(EXT_FIND)}
 
-${info EXT_FIND $(EXT_FIND2)}
+# List of files in the form `content/file.ext`
+FILES := $(shell find $(CONTENT) -type f \( $(strip $(EXT_FIND)) \) -print )
 
-FILES  := $(shell find content -type f \( $(strip $(EXT_FIND2)) \) -print )
-FILES_BASE := $(basename $(FILES))
-HTMLFILES := $(patsubst content/%, public/%.html, $(FILES_BASE))
-PANDOC_FLAGS := --template template.html
-PANDOC_FLAGS += -s
+# List of output HTML files
+HTMLFILES := $(patsubst $(CONTENT)/%, $(PUBLIC)/%.html, $(basename $(FILES)))
+# HTMLFILES := $(FILES:.org=.html)
 
-PANDOC := pandoc $(PANDOC_FLAGS)
+# Pandoc Setup
+PANDOC_FLAGS := --template template.html # Template to use
+PANDOC_FLAGS += -s # Standalone document
+PANDOC := pandoc $(PANDOC_FLAGS) # final pandoc command
 
-DIRS_CONTENT := $(shell find content ! -path content -type d)
-DIRS_PUBLIC := $(patsubst content/%, public/%, $(DIRS_CONTENT))
+# Mirror directory structure of content
+DIRS_CONTENT := $(shell find $(CONTENT) ! -path $(CONTENT) -type d)
+# Exclude the "content/" folder itself
+DIRS_PUBLIC := $(patsubst $(CONTENT)/%, $(PUBLIC)/%, $(DIRS_CONTENT))
 
-# ${info DIRS PUBLIC $(DIRS_PUBLIC)}
-# ${info DIRS CONTENT $(DIRS_CONTENT)}
-
+# Make any subdirectories needed in public
 $(foreach d, $(DIRS_PUBLIC), $(shell mkdir -p $(d)))
 
-# ${info FILES IS $(FILES)}
-# ${info HTMLFILES IS $(HTMLFILES)}
-
-
+# Metaprogramming maddness
 define MAKE_HTML
 
-public/%.html: $(join content/%, $(1))
+$(PUBLIC)/%.html: $(join $(CONTENT)/%, $(1))
 	$(PANDOC) $$^ -o $$@
 
 endef
@@ -48,15 +55,15 @@ $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 
 all: $(HTMLFILES)
 	echo "FILES: $(FILES) HTML $(HTMLFILES)"
-	rsync -avzh content/static/ public/static
-	cat sitemap.head.html > public/sitemap.html
+	rsync -avzh $(CONTENT)/static/ $(PUBLIC)/static
+	cat sitemap.head.html > $(PUBLIC)/sitemap.html
 	for files in $^; do \
 	    F="$${files#public/}"; \
-	    echo "<a href=\"$$F\">$$(basename -s .html $$F)</a><br />" >> public/sitemap.html; \
+	    echo "<a href=\"$$F\">$$(basename -s .html $$F)</a><br />" >> $(PUBLIC)/sitemap.html; \
 	done
-	cat sitemap.tail.html >> public/sitemap.html
+	cat sitemap.tail.html >> $(PUBLIC)/sitemap.html
 	echo "Running calendar.sh..."
 	$(shell ./calendar.sh)
 
 clean:
-	rm -rf public/*
+	rm -rf $(PUBLIC)
