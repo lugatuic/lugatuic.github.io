@@ -6,13 +6,14 @@ vpath %.html ./public
 
 EXT := .org .md
 
-EXT_FIND := $(foreach e, $(EXT), -name "*$(e)" -o)
+EXT_FIND := $(foreach e, $(EXT), -name \"*$(e)\" -o)
 
+# Need to remove the last -o 
 EXT_FIND2 := $(shell E="$(EXT_FIND)"; echo "$${E%*-o}")
 
 ${info EXT_FIND $(EXT_FIND2)}
 
-FILES  := $(shell find content -type f \( $(EXT_FIND2) \) -print )
+FILES  := $(shell find content -type f \( $(strip $(EXT_FIND2)) \) -print )
 FILES_BASE := $(basename $(FILES))
 HTMLFILES := $(patsubst content/%, public/%.html, $(FILES_BASE))
 PANDOC_FLAGS := --template template.html
