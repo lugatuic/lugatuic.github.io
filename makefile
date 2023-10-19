@@ -5,12 +5,17 @@ EXT := .org .md
 
 # Name of content folder
 CONTENT := content 
+
 # Name of output/public folder
 PUBLIC := public
+
+# Name of the scripts folder
+SCRIPT_DIR := scripts
 
 # Sanitize
 CONTENT := $(strip $(CONTENT))
 PUBLIC := $(strip $(PUBLIC))
+SCRIPT_DIR := $(strip $(SCRIPT_DIR))
 
 # Convert extensions to `find` command syntax
 EXT_FIND := $(foreach e, $(EXT), -name \"*$(e)\" -o)
@@ -26,12 +31,19 @@ FILES := $(shell find $(CONTENT) -type f \( $(strip $(EXT_FIND)) \) -print )
 HTMLFILES := $(patsubst $(CONTENT)/%, $(PUBLIC)/%.html, $(basename $(FILES)))
 # HTMLFILES := $(FILES:.org=.html)
 
+# List of scripts to run
+SCRIPTS := $(shell find $(SCRIPT_DIR) -type f -name "*.sh" -print)
+
+${info SCRIPTS $(SCRIPTS)}
+
+
 # Pandoc Setup
 PANDOC_FLAGS := --template template.html # Template to use
 PANDOC_FLAGS += -s # Standalone document
 PANDOC := pandoc $(PANDOC_FLAGS) # final pandoc command
 
 # Mirror directory structure of content
+# TODO Make this ignore static
 DIRS_CONTENT := $(shell find $(CONTENT) ! -path $(CONTENT) -type d)
 # Exclude the "content/" folder itself
 DIRS_PUBLIC := $(patsubst $(CONTENT)/%, $(PUBLIC)/%, $(DIRS_CONTENT))
@@ -54,16 +66,11 @@ $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 
 
 all: $(HTMLFILES)
-	echo "FILES: $(FILES) HTML $(HTMLFILES)"
+	echo "FILES: $(FILES) \n HTML $(HTMLFILES)"
 	rsync -avzh $(CONTENT)/static/ $(PUBLIC)/static
-	cat sitemap.head.html > $(PUBLIC)/sitemap.html
-	for files in $^; do \
-	    F="$${files#public/}"; \
-	    echo "<a href=\"$$F\">$$(basename -s .html $$F)</a><br />" >> $(PUBLIC)/sitemap.html; \
-	done
-	cat sitemap.tail.html >> $(PUBLIC)/sitemap.html
-	echo "Running calendar.sh..."
-	$(shell ./calendar.sh)
+	$(foreach s, $(SCRIPTS), $(shell $(s) $(HTMLFILES)))
 
 clean:
 	rm -rf $(PUBLIC)
+
+
