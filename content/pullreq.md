@@ -6,10 +6,8 @@ subtitle: A LUG workshop
 title: Git Pull Requests
 ---
 
-::: frame
 :::
 
-::: frame
 ### Overview
 :::
 
@@ -25,7 +23,6 @@ title: Git Pull Requests
 
 ## You get to contribute
 
-::: frame
 ### Pull Requests?
 
 1.  Also known as \"Merge Requests\"
@@ -39,7 +36,6 @@ title: Git Pull Requests
 5.  merged into main repo
 :::
 
-::: frame
 ### Where to start?
 
 1.  Draft your request
@@ -62,7 +58,6 @@ title: Git Pull Requests
     :::
 :::
 
-::: frame
 What happens if a bad pull requests get through?
 
 1.  Merge conflicts
@@ -74,19 +69,16 @@ What happens if a bad pull requests get through?
 4.  someone usually gets the shortest end of the stick
 :::
 
-::: frame
 Visual 1
 
 ![fork Guide](howtofork.png){#fig:how to fork}
 :::
 
-::: frame
 Visual 2
 
 ![Pull Request Menu](pullrequestwindow.png){#fig:pull request window}
 :::
 
-::: frame
 Visual 3
 
 ![Comp. Change Window](comparechangeswindow.png){#fig:CC Window}
