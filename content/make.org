@@ -1,0 +1,129 @@
+#+TITLE: Makefiles 
+* Work In Progress
+This article is work in progress! Check back soon for a full writeup.
+* Makefile Tier: Stupid
+:PROPERTIES:
+:ID:       52d36d9c-0f59-4a94-a29e-769a6d7cf1ec
+:END:
+
+#+BEGIN_SRC makefile :tangle build/makefile1
+  main:
+  	rm -rf main
+  	gcc file1.c file2.c -o $@
+#+END_SRC
+
+* Makefile Tier: Novice
+
+#+BEGIN_SRC makefile :tangle build/makefile2
+  main: file1.c file2.c
+  	gcc file1.c file2.c -o $@
+#+END_SRC
+
+#+RESULTS:
+: make: 'main' is up to date.
+
+* Makefile Tier Beginner
+#+BEGIN_SRC makefile :tangle build/makefile3
+  file1.o: file1.c
+  	gcc -c file1.c
+
+  file2.o: file1.c
+  	gcc -c file2.c
+
+  main: file1.o file2.o
+  	gcc file1.o file2.o -o $@
+#+END_SRC
+
+* Makefile Tier Intermediate
+#+BEGIN_SRC makefile :tangle build/makefile4
+  OBJS=file1.o file2.o
+
+  %.o: %.c
+  	gcc -c $^ -o $@
+  	${info compiled $^!!}
+
+
+  main: $(OBJS)
+  	gcc -fsanitize=address -fno-strict-aliasing -fno-stack-protector -fpie $^ -o $@
+#+END_SRC
+
+#+RESULTS:
+: compiled file1.c!!
+: gcc -c file1.c -o file1.o
+: compiled file2.c!!
+: gcc -c file2.c -o file2.o
+: gcc -fsanitize=address -fno-strict-aliasing -fno-stack-protector -fpie file1.o file2.o -o main
+
+* Makefile Tier Pro
+#+BEGIN_SRC makefile :tangle build/makefile5
+  CC=gcc
+  CFLAGS=-fsanitize=address -fno-strict-aliasing -fno-stack-protector -fpie 
+  OBJS=file1.o file2.o
+
+  main: $(OBJS)
+  	$(CC) $(CFLAGS) $^ -o $@
+#+END_SRC
+
+* Makefile Tier Legend
+#+BEGIN_SRC makefile :tangle build/makefile5
+  CC=gcc
+  CFLAGS=-fsanitize=address -fno-strict-aliasing -fno-stack-protector -fpie 
+  OBJS=file1.o file2.o
+
+  depend: .depend
+  	gcc -MM *.c > .depend
+
+  include .depend
+
+  main: $(OBJS) depend
+  	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+#+END_SRC
+
+
+* Tangent: Non C Makefiles
+** LaTeX
+#+BEGIN_SRC makefile
+  %.pdf: %.tex
+  	pdflatex $^
+
+  clean:
+  	rm -rf *.log *.aux
+
+  .PHONY clean
+#+END_SRC
+
+** Other
+Basically anytime you want to run command(s) when some ~input files~
+are *NEWER* than some ~output files~.
+* Makefile Tier BRAIN DAMAGE
+
+
+- =${info <stuff>}= Useful for logging
+
+- =${wildcard *.c}= Useful for finding files
+
+- =${shell <shell cmd>}= Run arbitrary shell commands!
+
+- =${foreach i, LIST, <cmd>}= : Do cmd for each i in LIST
+
+  + Can also return values!
+
+- Phony Targets: Targets that dont produce the file of their name!
+
+  + Useful to run every time.
+
+** Brain damage begins here
+
+[[Https://github.com/lugatuic/lugatuic.github.io][See LUG Website!]]
+
+
+* Utils
+#+BEGIN_SRC sh
+  touch *.c
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC emacs-lisp
+  (org-babel-result-hide-all)
+#+END_SRC
