@@ -17,7 +17,7 @@
    :CUSTOM_ID: basic-git-workflow
    :END:
 #+caption: Git Workflow
-[[file:static/images/git-workflow.png]]
+[[file:static/git/git-workflow.png]]
 
 Image source: /https://backlog.com/git-tutorial/git-workflow//
 
@@ -68,7 +68,7 @@ file system in the =.git= directory.
 - Pointers to files, content and other trees
 
 #+caption: Git Tree
-[[file:static/images/git-tree.png]]
+[[file:static/git/git-tree.png]]
 
 Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 
@@ -82,7 +82,7 @@ Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 - Pointer to parent
 
 #+caption: Git Commit
-[[file:static/images/git-commit.png]]
+[[file:static/git/git-commit.png]]
 
 Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 
@@ -90,7 +90,7 @@ Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 - Pointer to a commit
 
 #+caption: Git References
-[[file:static/images/git-ref.png]]
+[[file:static/git/git-ref.png]]
 
 Image source:
 /https://git-scm.com/book/en/v2/Git-Internals-Git-References/
