@@ -1,8 +1,0 @@
-#+TITLE: 
-
-- [[file:contributing.org][Contributing to this website.]]
-- [[file:gdb.org][GDB Quickstart and Tricks]]
-- [[file:git.org][Introduction to Git]]
-- [[file:terminal.org][Linux Terminal Basics]]
-- [[file:index.org][Linux User's Group @ UIC]]
-- [[file:blog.org][Test]]
