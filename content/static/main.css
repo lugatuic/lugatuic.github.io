@@ -38,6 +38,12 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
+      /* Set sans-serif & mono fonts */
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --standard-border-radius: 5px;
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
