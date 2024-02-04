@@ -13,7 +13,7 @@ tr -d "\r" |
 sed "/^$/d" |
 
 # Black magic
-gawk -E script.awk |
+gawk -E scripts/parse_calendar.awk |
 
 # \n is better anyway
 sed 's/\r//g' > public/events.xml
