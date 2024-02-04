@@ -6,24 +6,7 @@ subtitle: A LUG workshop
 title: Git Pull Requests
 ---
 
-:::
-
-### Overview
-:::
-
-# Pull Requests
-
-## What are they?
-
-## How to make one?
-
-## What happens if you do it wrong?
-
-# First hand experience
-
-## You get to contribute
-
-### Pull Requests?
+# What are they?
 
 1.  Also known as \"Merge Requests\"
 
@@ -34,7 +17,10 @@ title: Git Pull Requests
 4.  request if your changes can join main repo
 
 5.  merged into main repo
-:::
+
+## First hand experience
+
+You get to contribute!
 
 ### Where to start?
 
@@ -52,13 +38,10 @@ title: Git Pull Requests
 
     3.  If you don't it gets denied
 
-    ::: alertblock
-    WARNING PLEASE CHECK FOR UPDATES TO THE MAIN REPO BEFORE DOING A
-    PULL REQUEST!
-    :::
-:::
+    **WARNING PLEASE CHECK FOR UPDATES TO THE MAIN REPO BEFORE DOING A
+    PULL REQUEST!**
 
-What happens if a bad pull requests get through?
+### What happens if a bad pull requests get through?
 
 1.  Merge conflicts
 
@@ -67,19 +50,15 @@ What happens if a bad pull requests get through?
 3.  lots of yelling and screaming
 
 4.  someone usually gets the shortest end of the stick
-:::
 
 Visual 1
 
-![fork Guide](static/pullreq/howtofork.png){#fig:how to fork}
-:::
+![fork Guide](static/pullreq/howtofork.png){how to fork}
 
 Visual 2
 
-![Pull Request Menu](static/pullreq/pullrequestwindow.png){#fig:pull request window}
-:::
+![Pull Request Menu](static/pullreq/pullrequestwindow.png){pull request window}
 
 Visual 3
 
-![Comp. Change Window](static/pullreq/comparechangeswindow.png){#fig:CC Window}
-:::
+![Comp. Change Window](static/pullreq/comparechangeswindow.png){CC Window}
