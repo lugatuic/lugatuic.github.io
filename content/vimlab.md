@@ -125,7 +125,7 @@ to the line your cursor is on.
                     another wacky line!
 
 ### Example 2
-Lets you `d`elete a `w`ord.
+`dw` lets you `d`elete a `w`ord.
 
 The works to specify your selection after [any]{.underline} action! So,
 this will work with too!
