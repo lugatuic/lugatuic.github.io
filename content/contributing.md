@@ -16,7 +16,8 @@ using `pandoc`'s extensive format conversion and templating. Currently both
 1. Text editor with support for either Markdown or Org-mode files. Common
    recommendations include [VS Code](https://code.visualstudio.com/), `vim`, or
    `emacs`.
-2. Basic usage of [Git](git2.html).
+2. Dependencies for building the website like `libxslt` or `pandoc`.
+3. Basic usage of [Git](git2.html).
 
 ## Adding Content
 1. Fork the [website repo](https://github.com/lugatuic/lugatuic.github.io) and make a
