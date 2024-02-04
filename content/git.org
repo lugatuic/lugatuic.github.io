@@ -19,7 +19,7 @@
 #+caption: Git Workflow
 [[file:static/git/git-workflow.png]]
 
-Image source: /https://backlog.com/git-tutorial/git-workflow//
+Image source: https://backlog.com/git-tutorial/git-workflow/
 
 ** Git Basics
    :PROPERTIES:
@@ -70,7 +70,7 @@ file system in the =.git= directory.
 #+caption: Git Tree
 [[file:static/git/git-tree.png]]
 
-Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
+Image source: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 
 **** Commit
      :PROPERTIES:
@@ -84,7 +84,7 @@ Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 #+caption: Git Commit
 [[file:static/git/git-commit.png]]
 
-Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
+Image source: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 
 **** Ref (aka tag, branch, etc.)
 - Pointer to a commit
@@ -93,7 +93,7 @@ Image source: /https://git-scm.com/book/en/v2/Git-Internals-Git-Objects/
 [[file:static/git/git-ref.png]]
 
 Image source:
-/https://git-scm.com/book/en/v2/Git-Internals-Git-References/
+https://git-scm.com/book/en/v2/Git-Internals-Git-References/
 
 **** Read more
      :PROPERTIES:
