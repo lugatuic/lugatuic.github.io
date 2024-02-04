@@ -71,15 +71,15 @@ What happens if a bad pull requests get through?
 
 Visual 1
 
-![fork Guide](howtofork.png){#fig:how to fork}
+![fork Guide](static/pullreq/howtofork.png){#fig:how to fork}
 :::
 
 Visual 2
 
-![Pull Request Menu](pullrequestwindow.png){#fig:pull request window}
+![Pull Request Menu](static/pullreq/pullrequestwindow.png){#fig:pull request window}
 :::
 
 Visual 3
 
-![Comp. Change Window](comparechangeswindow.png){#fig:CC Window}
+![Comp. Change Window](static/pullreq/comparechangeswindow.png){#fig:CC Window}
 :::
