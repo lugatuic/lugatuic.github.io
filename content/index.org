@@ -24,4 +24,7 @@ Make sure to join the @@html:<a href="https://discord.gg/Edrb8ASX7m">LUG Discord
 Get updates on the latest happenings on [[https://lug.cs.uic.edu/events.xml][the events page!]] ([[https://lug.cs.uic.edu/rss.xml][RSS Feed]]).
 
 * Content
-[[file:sitemap.html][Sitemap]]
+- [[file:sitemap.html][Sitemap]]
+- [[file:contact.html][Contact Us]]
+- [[https://github.com/lugatuic][Github]]
+- [[https://uic.campusgroups.com/linuxuser/club_signup][CampusGroups RSO]]
