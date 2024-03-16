@@ -3,6 +3,7 @@ This is the markdown transcript for a presentation held on Tuesday, March 12th.
 
 - [Presentation in PDF form](static/opsec/opsec.pdf)
 - [Presentation as an interactive website](static/opsec/opsec.html)
+- Source on [GitHub](https://github.com/Olympicene/opsec-presentation)
 
 # Threat Modeling 101
 Intro to Operational Security
