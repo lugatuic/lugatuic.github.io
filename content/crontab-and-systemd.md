@@ -63,8 +63,8 @@ The crontab actually runs on top of systemd on many systems!
 
 ### Systemd Services
 
-According to a helpful `man systemd.service` command, a systemd service
-is a "process controlled and supervised by systemd".
+> According to a helpful `man systemd.service` command, a systemd service
+> is a "process controlled and supervised by systemd".
 
 Below is a `systemd` service I have for a Rust Discord bot I wrote.
 
@@ -116,3 +116,5 @@ keep in mind:
 
 3.  Your service can't start on boot anymore, now, since it must start
     within the context of *your* user account.
+
+#### Original Presentation Slides Available [Here](static/crontab-and-systemd/crontab-presentation.pdf)
