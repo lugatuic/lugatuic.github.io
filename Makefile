@@ -17,6 +17,9 @@ CONTENT := $(strip $(CONTENT))
 PUBLIC := $(strip $(PUBLIC))
 SCRIPT_DIR := $(strip $(SCRIPT_DIR))
 
+include **/*.mk
+
+
 # Convert extensions to `find` command syntax
 EXT_FIND := $(foreach e, $(EXT), -name \"*$(e)\" -o)
 EXT_FIND := $(shell E="$(EXT_FIND)"; echo "$${E%*-o}")
@@ -36,11 +39,12 @@ SCRIPTS := $(shell find $(SCRIPT_DIR) -type f -name "*.sh" -print)
 
 ${info SCRIPTS $(SCRIPTS)}
 
+PANDOC_FILE_SPECIFIC=$(strip $($(basename $(notdir $^))_CMDS))
 
 # Pandoc Setup
 PANDOC_FLAGS := --template template.html # Template to use
 PANDOC_FLAGS += -s # Standalone document
-PANDOC := pandoc $(PANDOC_FLAGS) # final pandoc command
+PANDOC = pandoc $(PANDOC_FLAGS) # final pandoc command
 
 # Mirror directory structure of content
 # TODO Make this ignore static
@@ -55,7 +59,7 @@ $(foreach d, $(DIRS_PUBLIC), $(shell mkdir -p $(d)))
 define MAKE_HTML
 
 $(PUBLIC)/%.html: $(join $(CONTENT)/%, $(1))
-	$(PANDOC) $$^ -o $$@
+	$(PANDOC) $$(PANDOC_FILE_SPECIFIC) $$^ -o $$@
 
 endef
 
