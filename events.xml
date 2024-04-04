@@ -1,32 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <?xml-stylesheet type="text/xsl" href="/static/style.xsl" ?>
-<<html>>
+<vcalendar>
+<version>
 <![CDATA[
+2.0
 
 ]]>
-</<html>>
-<<head><title>504 gateway time-out<-title><-head>>
+</version>
+<prodid>
 <![CDATA[
+CAMPUSGROUPS
 
 ]]>
-</<head><title>504 gateway time-out</title></head>>
-<<body>>
+</prodid>
+<x-wr-calname>
 <![CDATA[
+Linux User Group
 
 ]]>
-</<body>>
-<<center><h1>504 gateway time-out<-h1><-center>>
+</x-wr-calname>
+<x-published-ttl>
 <![CDATA[
+PT1H
 
 ]]>
-</<center><h1>504 gateway time-out</h1></center>>
-<<-body>>
-<![CDATA[
-
-]]>
-</</body>>
-<<-html>>
-<![CDATA[
-
-]]>
-</</html>>
+</x-published-ttl>
+</vcalendar>
