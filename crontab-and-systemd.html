@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jacob Cohen" />
+  <title>The Linux Crontab &amp; Systemd</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">The Linux Crontab &amp; Systemd</h1>
+<p><img src="static/crontab-and-systemd/crontab.png" /></p>
+<h1 id="crontab-introduction">Crontab Introduction</h1>
+<h3 id="crontab-basics">Crontab Basics</h3>
+<ul>
+<li>Super simple to set up</li>
+<li>Reliable (unlike some operating systems <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)</li>
+<li>Allows you to consistently run tasks
+<ul>
+<li>Get status updates via email (or not)</li>
+</ul></li>
+</ul>
+<h3 id="cronjob-examples">Cronjob Examples</h3>
+<p>We call tasks that run on the crontab “cronjobs”</p>
+<p>Layout: <code>minute hour dom month dow task [arguments]</code></p>
+<ul>
+<li><code>*/1 * * * * /home/jacob/notification-checker.py</code>
+<ul>
+<li>Run a script to check if we need to send a notification every minute.</li>
+</ul></li>
+<li><code>0 2 * * mon /root/pull-remote-backups.sh</code>
+<ul>
+<li>Runs every Monday at 2:00 a.m., pulling my server backups</li>
+</ul></li>
+<li><code>@reboot echo 'Message Text' | mail -s 'Server Rebooted!' email_address@domain.tld</code>
+<ul>
+<li>Send yourself an email every time your machine reboots</li>
+</ul></li>
+</ul>
+<h3 id="editing-the-crontab">Editing the Crontab</h3>
+<blockquote>
+<p>How do I edit the Crontab?</p>
+</blockquote>
+<p>Run this command, that’s all: <code>crontab -e</code></p>
+<p>To change your editor, you can run <code>select-editor</code>, or just change your <code>$EDITOR</code> environment variable.</p>
+<h3 id="configuring-emails">Configuring Emails</h3>
+<p>If you already have emailing setup on your Linux server (or home computer!), you can simply write, somewhere in your crontab</p>
+<blockquote>
+<p><code>MAILTO=email_address@domain.tld</code></p>
+</blockquote>
+<h1 id="systemd-introduction">Systemd Introduction</h1>
+<p>What is <code>systemd</code>? <code>systemd</code> is an array of software tools for many different Linux<br />
+operating systems.</p>
+<p>Its main goal is to serve as a “system and service manager” across Linux distributions.</p>
+<p>The crontab actually runs on top of systemd on many systems!</p>
+<h3 id="systemd-services">Systemd Services</h3>
+<blockquote>
+<p>According to a helpful <code>man systemd.service</code> command, a systemd service is a “process controlled and supervised by systemd”.</p>
+</blockquote>
+<p>Below is a <code>systemd</code> service I have for a Rust Discord bot I wrote.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">[Unit]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="dt">Description</span><span class="ot">=</span><span class="st">Rust Discord Bot</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="dt">After</span><span class="ot">=</span><span class="st">network.target</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="kw">[Service]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="dt">Type</span><span class="ot">=</span><span class="st">simple</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="dt">EnvironmentFile</span><span class="ot">=</span><span class="st">/root/Rust-Discord-Bot-Env</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="dt">ExecStart</span><span class="ot">=</span><span class="st">/sbin/rust-discord-bot</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="kw">[Install]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a><span class="dt">WantedBy</span><span class="ot">=</span><span class="st">multi-user.target</span></span></code></pre></div>
+<h3 id="working-with-systemd-services">Working with Systemd Services</h3>
+<p>To configure a service to start on boot, we must first add it (as a <code>.service</code> file) to the systemd system directory (usually <code>/etc/systemd/system/</code>).</p>
+<p>Then, we use the <code>systemctl</code> command to configure the service (<code>sudo</code> here only necessary our service is a <em>system</em> service).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">sudo systemctl enable service-name.service # Makes the service start on boot</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="dt">sudo systemctl start service-name.service # Starts the service now (so no reboot)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="dt">sudo systemctl status service-name.service # Checks the current status of the service</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="dt">journalctl -u service-name.service # Shows service logs</span></span></code></pre></div>
+<h3 id="systemd-user-services">Systemd User Services?</h3>
+<p>You can also have systemd services run on your <em>user accounts</em> (no <code>root</code> needed)!</p>
+<p>This is just as simple as the system services, with three differences to keep in mind:</p>
+<ol type="1">
+<li><p>You place the service file in <code>~/.config/systemd/user/</code> instead of <code>/etc/systemd/system/</code></p></li>
+<li><p>You add a <code>--user</code> flag to all <code>systemctl</code> commands</p></li>
+<li><p>Your service can’t start on boot anymore, now, since it must start within the context of <em>your</em> user account.</p></li>
+</ol>
+<h4 id="original-presentation-slides-available-here">Original Presentation Slides Available <a href="static/crontab-and-systemd/crontab-presentation.pdf">Here</a></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Looking at you, <code>taskschd.msc</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<p class="date">April 2024</p>
+</body>
+</html>
