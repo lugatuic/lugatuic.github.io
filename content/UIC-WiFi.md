@@ -11,16 +11,7 @@ To connect to our network, make sure that you are connecting to **UIC-WiFi**.
 
 <!-- TODO: Get screenshot of Ubuntu Network Manager GUI for clarity. -->
 
-You should be prompted for the following information:
-- EAP Method
-- Phase 2 Authentication
-- CA Certificate
-- Domain
-- Identity
-- Anonymous Identity
-- Wireless Password
-
-Fill all of these fields as such:
+When attempting to connect to the network, you will be prompted for the following information:
 
 | Field | Input |
 | ----- | ----- |
