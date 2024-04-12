@@ -9,7 +9,7 @@ This article assumes that you both have the correct wireless drivers installed, 
 
 To connect to our network, make sure that you are connecting to **UIC-WiFi**.
 
-<!-- TODO: Get screenshot of Ubuntu Network Manager GUI for clarity. -->
+![A user with a KDE desktop connecting to UIC WiFi via the GUI on Fedora.](static/UIC-WiFi/uic-connection-example.png)
 
 When attempting to connect to the network, you will be prompted for the following information:
 
