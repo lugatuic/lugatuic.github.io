@@ -1,32 +1,134 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <?xml-stylesheet type="text/xsl" href="/static/style.xsl" ?>
-<<html>>
+<vcalendar>
+<version>
 <![CDATA[
+2.0
 
 ]]>
-</<html>>
-<<head><title>403 forbidden<-title><-head>>
+</version>
+<prodid>
 <![CDATA[
+CAMPUSGROUPS
 
 ]]>
-</<head><title>403 forbidden</title></head>>
-<<body>>
+</prodid>
+<x-wr-calname>
 <![CDATA[
+Linux User Group
 
 ]]>
-</<body>>
-<<center><h1>403 forbidden<-h1><-center>>
+</x-wr-calname>
+<x-published-ttl>
 <![CDATA[
+PT1H
 
 ]]>
-</<center><h1>403 forbidden</h1></center>>
-<<-body>>
+</x-published-ttl>
+<vevent>
+<dtstamp>
 <![CDATA[
+20240603T010757
 
 ]]>
-</</body>>
-<<-html>>
+</dtstamp>
+<last-modified>
 <![CDATA[
+20240408T132237
 
 ]]>
-</</html>>
+</last-modified>
+<created>
+<![CDATA[
+20240308T120000
+
+]]>
+</created>
+<sequence>
+<![CDATA[
+1
+
+]]>
+</sequence>
+<organizer cn="'linux user group'" >
+<![CDATA[
+https
+//uic.campusgroups.com/linuxuser/
+
+]]>
+</organizer>
+<contact>
+<![CDATA[
+https
+//uic.campusgroups.com/linuxuser/rsvp_boot?id=2257568#event_host
+
+]]>
+</contact>
+<categories x-cg-category="club_acronym" >
+<![CDATA[
+LINUXUSER
+
+]]>
+</categories>
+<categories x-cg-category="event_type" >
+<![CDATA[
+Workshop
+
+]]>
+</categories>
+<categories x-cg-category="event_tags" >
+<![CDATA[
+Presentation/Discussion,Computer Science,Linux
+
+]]>
+</categories>
+<dtstart>
+<![CDATA[
+20240312T213000Z
+
+]]>
+</dtstart>
+<dtend>
+<![CDATA[
+20240312T223000Z
+
+]]>
+</dtend>
+<uid>
+<![CDATA[
+2f32a1c93e84b601c4e0e73f86420bd3382024_2
+49
+11_PM@campusgroups.com
+
+]]>
+</uid>
+<summary encoding="quoted-printable" >
+<![CDATA[
+Threat Modeling 101
+ An introduction to OpSec
+
+]]>
+</summary>
+<location>
+<![CDATA[
+ Sign in to download the location
+
+]]>
+</location>
+<url>
+<![CDATA[
+https
+//uic.campusgroups.com/rsvp?id=2257568
+
+]]>
+</url>
+<description>
+<![CDATA[
+Learn about privacy, anonymity, and why you should care about any of it\n---\nEvent Details
+ https
+//uic.campusgroups.com/rsvp?id=2257568
+
+]]>
+</description>
+</vevent>
+</vcalendar>
