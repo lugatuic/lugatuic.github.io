@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Michael Hanif Khan" />
+  <title>How to Connect to UIC WiFi on Linux</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">How to Connect to UIC WiFi on Linux</h1>
+<p>This article assumes that you both have the correct wireless drivers installed, and that you are connecting to the network on UIC’s campus.</p>
+<p>To connect to our network, make sure that you are connecting to <strong>UIC-WiFi</strong>.</p>
+<p><img src="static/UIC-WiFi/uic-connection-example.png" alt="A user with a KDE desktop connecting to UIC WiFi via the GUI on Fedora." /> <img src="static/UIC-WiFi/gnome-wifi.png" alt="A user with a GNOME desktop connecting to UIC WiFi." /></p>
+<p>When attempting to connect to the network, you will be prompted for the following information:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EAP Method</td>
+<td>Protected EAP (PEAP)</td>
+</tr>
+<tr class="even">
+<td>Phase 2 Authentication</td>
+<td>MSCHAP</td>
+</tr>
+<tr class="odd">
+<td>CA Certificate</td>
+<td>Don’t Validate / None</td>
+</tr>
+<tr class="even">
+<td>Domain</td>
+<td>uic.edu</td>
+</tr>
+<tr class="odd">
+<td>Identity</td>
+<td><strong>Your UIC NetID</strong> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr class="even">
+<td>Anonymous Identity</td>
+<td>Anonymous</td>
+</tr>
+<tr class="odd">
+<td>Wireless Password</td>
+<td><strong>Your UIC Password</strong></td>
+</tr>
+</tbody>
+</table>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Your NetID is your UIC email, minus the <code>@uic.edu</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<p class="date">April 9th, 2024</p>
+</body>
+</html>
