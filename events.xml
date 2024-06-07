@@ -28,7 +28,7 @@ PT1H
 <vevent>
 <dtstamp>
 <![CDATA[
-20240607T100300
+20240607T110534
 
 ]]>
 </dtstamp>
@@ -78,7 +78,7 @@ Workshop
 </categories>
 <categories x-cg-category="event_tags" >
 <![CDATA[
-Presentation/Discussion,Computer Science,MDY8
+Presentation/Discussion,Computer Science,Linux
 
 ]]>
 </categories>
