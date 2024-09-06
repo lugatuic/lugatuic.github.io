@@ -23,10 +23,11 @@ jobs:
       - name: One Make to Rule them all
         run: make all
 
-      - name: Publish generated content to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: public
-          git-config-user: "gh-runner"
-          git-config-email: "gh@example.com"
+          path: public/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
