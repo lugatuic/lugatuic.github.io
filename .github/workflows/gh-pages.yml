@@ -1,4 +1,4 @@
-name: Publish to GitHub Pages
+name: Deploy Website
 
 on:
   push:
@@ -6,10 +6,23 @@ on:
       - main
   schedule:
     - cron: "0 * * * *"
+  workflow_dispatch:
 
 jobs:
+  calendar_sync:
+    runs-on: ubuntu-latest
+    name: Sync Calendar
+    steps:
+      - uses: acm-uic/calsync@main
+        with:
+          discord-guild-id: ${{ secrets.DISCORD_EVENTS_SYNC_DISCORD_GUILD_ID }}
+          discord-bot-token: ${{ secrets.DISCORD_EVENTS_SYNC_DISCORD_BOT_TOKEN }}
+          discord-application-id: ${{ secrets.DISCORD_EVENTS_SYNC_DISCORD_APPLICATION_ID }}
+          google-calendar-id: ${{ secrets.DISCORD_EVENTS_SYNC_GOOGLE_CALENDAR_CALENDAR_ID }}
+          google-api-key: ${{ secrets.DISCORD_EVENTS_SYNC_GOOGLE_CALENDAR_API_KEY }}
   publish:
     runs-on: ubuntu-latest
+    name: Publish to GitHub Pages
     steps:
       - name: Check out
         uses: actions/checkout@v1
