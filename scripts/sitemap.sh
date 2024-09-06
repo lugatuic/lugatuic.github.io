@@ -4,11 +4,11 @@ set -xeu
 
 LINKS=$""
 
-for files in "$@"; do 
-   F="${files#public/}"; 
-	 TMP=""
-   printf -v TMP "<a href=\"$F\">$(basename -s .html $F)</a><br />\n"
-	 LINKS="${LINKS}${TMP}"
+for files in $(echo "$@" | tr ' ' '\n' | sort -g); do 
+	F="${files#public/}"; 
+	TMP=""
+	printf -v TMP "<a href=\"$F\">$(basename -s .html $F)</a><br />\n"
+	LINKS="${LINKS}${TMP}"
 done
 		
 
@@ -27,6 +27,6 @@ cat >"public/sitemap.html" <<EOF
 ${LINKS}
 
 		</main>
-</body>
+	</body>
 </html>
 EOF
