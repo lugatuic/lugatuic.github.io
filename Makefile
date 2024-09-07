@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean demo
 
 # Define desired extensions here.
 EXT := .org .md
@@ -77,4 +77,5 @@ all: $(HTMLFILES)
 clean:
 	rm -rf $(PUBLIC)
 
-
+demo: all
+	python -m http.server -d public/ -b 127.0.0.1 8080
