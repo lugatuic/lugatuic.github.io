@@ -32,7 +32,6 @@ FILES := $(shell find $(CONTENT) -type f \( $(strip $(EXT_FIND)) \) -print )
 
 # List of output HTML files
 HTMLFILES := $(patsubst $(CONTENT)/%, $(PUBLIC)/%.html, $(basename $(FILES)))
-# HTMLFILES := $(FILES:.org=.html)
 
 # List of scripts to run
 SCRIPTS := $(shell find $(SCRIPT_DIR) -type f -name "*.sh" -print)
@@ -48,9 +47,8 @@ PANDOC_FLAGS += --metadata-file metadata.yml
 PANDOC = pandoc $(PANDOC_FLAGS) # final pandoc command
 
 # Mirror directory structure of content
-# TODO Make this ignore static
-DIRS_CONTENT := $(shell find $(CONTENT) ! -path $(CONTENT) -type d)
 # Exclude the "content/" folder itself
+DIRS_CONTENT := $(shell find $(CONTENT) ! -path $(CONTENT) ! -path $(CONTENT)/static* -type d)
 DIRS_PUBLIC := $(patsubst $(CONTENT)/%, $(PUBLIC)/%, $(DIRS_CONTENT))
 
 # Make any subdirectories needed in public
@@ -71,7 +69,7 @@ $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 
 
 all: $(HTMLFILES)
-	echo "FILES: $(FILES) \n HTML $(HTMLFILES)"
+	@echo -e "FILES: $(FILES) \nHTML: $(HTMLFILES)"
 	rsync -avzh $(CONTENT)/static/ $(PUBLIC)/static
 	$(foreach s, $(SCRIPTS), $(shell $(s) $(HTMLFILES)))
 
