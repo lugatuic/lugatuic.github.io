@@ -4,29 +4,11 @@ set -xeu
 
 LINKS=$""
 
-for files in $(echo "$@" | tr ' ' '\n' | sort -g); do 
+for files in $(echo "$@" | tr ' ' '\n' | sort -V); do
 	F="${files#public/}"; 
 	TMP=""
-	printf -v TMP "<a href=\"$F\">$(basename -s .html $F)</a><br />\n"
+	printf -v TMP "[${F%.html}]($F)  \n"
 	LINKS="${LINKS}${TMP}"
 done
 		
-
-cat >"public/sitemap.html" <<EOF
-<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-	<head>
-		<title>LUG Sitemap</title>
-		<link rel="stylesheet" href="static/main.css" />
-		<style> a {font-size:2em; line-height:1.2;} </style>
-	</head>
-	<body>
-		<main>
-
-${LINKS}
-
-		</main>
-	</body>
-</html>
-EOF
+pandoc -s --template template.html --metadata-file metadata.yml --metadata-file sitemap.yml -o public/sitemap.html <<< "${LINKS}"
