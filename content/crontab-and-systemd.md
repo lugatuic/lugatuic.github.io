@@ -8,7 +8,7 @@ subtitle: |
 title: The Linux Crontab & Systemd
 ---
 
-![](static/crontab-and-systemd/crontab.png)
+![](/static/crontab-and-systemd/crontab.png)
 
 # Crontab Introduction
 
@@ -117,4 +117,4 @@ keep in mind:
 3.  Your service can't start on boot anymore, now, since it must start
     within the context of *your* user account.
 
-#### Original Presentation Slides Available [Here](static/crontab-and-systemd/crontab-presentation.pdf)
+#### Original Presentation Slides Available [Here](/static/crontab-and-systemd/crontab-presentation.pdf)

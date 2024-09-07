@@ -2,7 +2,7 @@
 #+AUTHOR: Soham S Gumaste
 #+OPTIONS: toc:nil
 
-#+HTML: <img src="static/logo.svg" width="500" height="200" />
+#+HTML: <img src="/static/logo.svg" width="500" height="200" />
 
 * Welcome
 

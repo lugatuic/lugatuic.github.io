@@ -1,14 +1,14 @@
 # Metadata
 This is the markdown transcript for a presentation held on Tuesday, March 12th.
 
-- [Presentation in PDF form](static/opsec/opsec.pdf)
-- [Presentation as an interactive website](static/opsec/opsec.html)
+- [Presentation in PDF form](/static/opsec/opsec.pdf)
+- [Presentation as an interactive website](/static/opsec/opsec.html)
 - Source on [GitHub](https://github.com/Olympicene/opsec-presentation)
 
 # Threat Modeling 101
 ## Intro to Operational Security
 
-![width:350px](static/opsec/logo.png)
+![width:350px](/static/opsec/logo.png)
 
 ## What is Security
 "Security is a property (or more accurately a collection of properties) that hold in a given system under a given set of constraints"
@@ -25,9 +25,9 @@ This is the markdown transcript for a presentation held on Tuesday, March 12th.
 ### Who uses Operation Security?
 
 <p float="left" class="images">
-  <img src="static/opsec/government.png" width="20%" />
-  <img src="static/opsec/enterprise.png" width="20%" />
-  <img src="static/opsec/laptop.png" width="20%" />
+  <img src="/static/opsec/government.png" width="20%" />
+  <img src="/static/opsec/enterprise.png" width="20%" />
+  <img src="/static/opsec/laptop.png" width="20%" />
 </p>
 
 - Government
@@ -68,7 +68,7 @@ Ensures that systems and resources are accessible and operational when needed, m
 ### Accountability
 Establishes responsibility for actions taken within the system, enabling traceability and accountability for security incidents or breaches.
 
-![center width:500px](static/opsec/CIA.jpg)
+![center width:500px](/static/opsec/CIA.jpg)
 
 
 ## What is Threat Modeling?
@@ -83,9 +83,9 @@ How does an SQL injection effect CIA?
 
 
 <p float="left" class="images">
-  <img src="static/opsec/sqsl-injection.png" width="20%" />
-  <img src="static/opsec/ddos.png" width="20%" />
-  <img src="static/opsec/breach.png" width="20%" />
+  <img src="/static/opsec/sqsl-injection.png" width="20%" />
+  <img src="/static/opsec/ddos.png" width="20%" />
+  <img src="/static/opsec/breach.png" width="20%" />
 </p>
 
 Go over common threats you might face in your own deployments.
@@ -123,7 +123,7 @@ KEY THING: Do all this *before* the incident happens
 There are many different well-defined processes for Threat Modeling
 
 But we will use this simplified model for our usecase
-![width:650px center](static/opsec/threat_model.png)
+![width:650px center](/static/opsec/threat_model.png)
 
 <https://owasp.org/www-community/Threat_Modeling_Process>
 <https://www.praetorian.com/blog/what-is-threat-modeling-and-why-its-important/>

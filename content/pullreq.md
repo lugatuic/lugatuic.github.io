@@ -53,12 +53,12 @@ You get to contribute!
 
 Visual 1
 
-![fork Guide](static/pullreq/howtofork.png){how to fork}
+![fork Guide](/static/pullreq/howtofork.png){how to fork}
 
 Visual 2
 
-![Pull Request Menu](static/pullreq/pullrequestwindow.png){pull request window}
+![Pull Request Menu](/static/pullreq/pullrequestwindow.png){pull request window}
 
 Visual 3
 
-![Comp. Change Window](static/pullreq/comparechangeswindow.png){CC Window}
+![Comp. Change Window](/static/pullreq/comparechangeswindow.png){CC Window}

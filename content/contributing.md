@@ -44,7 +44,7 @@ title: Contribution Guide
 4. Write out your content. You can reference other content files with a link
    (so a file like `content/a.md` would be referenced as `a.html` in your
    hyperlink). If you have static content, make a folder with the name of your
-   content file and reference them from `static/<name of your content
+   content file and reference them from `/static/<name of your content
    file>/<static file>`. Put your static content in the `static/` folder with
    the equivalent folder structure.
 5. Build the website by using `make`. The default `all` rule builds the entire
