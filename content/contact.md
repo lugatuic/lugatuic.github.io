@@ -15,13 +15,14 @@ through our listserv ([lug-officers@uic.edu](mailto:lug-officers@uic.edu)).
 ## Announcements
 For announcements and newsletters, our predominant method of communication is
 the [Discord](https://discord.gg/Edrb8ASX7m). However, we also have a
-[newsletter listserv](https://uic.campusgroups.com/linuxuser/club_signup)
-provided by the university's CampusGroups service.
+[newsletter listserv](mailto:lug@listserv.uic.edu). You can join by emailing
+`SUBSCRIBE LUG` to `listserv@uic.edu`.
 
-Additionally, there exists a (mostly archived) LUG
-[listserv](mailto:lug@listserv.uic.edu). While announcements have been
-superceded with the Discord and CampusGroups listserv instead, it may be
-interesting to view the [archives](https://listserv.uic.edu/archives/lug.html).
+
+Additionally, there exists a (mostly archived)
+[CampusGroups newsletter](https://uic.campusgroups.com/linuxuser/club_signup)
+provided by the university's CampusGroups service. Announcements have been
+superceded with the Discord and `lug@listserv.uic.edu` listserv instead.
 
 ## Location
 LUG shares an office with [ACM@UIC](https://acm.cs.uic.edu/) in SELE 2264 where
