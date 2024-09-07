@@ -18,10 +18,11 @@ When attempting to connect to the network, you will be prompted for the followin
 | ----- | ----- |
 | EAP Method | Protected EAP (PEAP) |
 | Phase 2 Authentication | MSCHAP |
-| CA Certificate | Don't Validate / None |
+| CA Certificate | Select from file -> `/etc/ssl/certs/ca-certificates.crt` [^1] |
 | Domain | uic.edu |
-| Identity | **Your UIC NetID** [^1]|
+| Identity | **Your UIC NetID** [^2]|
 | Anonymous Identity | Anonymous |
 | Wireless Password | **Your UIC Password** |
 
-[^1]: Your NetID is your UIC email, minus the `@uic.edu`.
+[^1]: If you are having trouble validating using the system CA store, you can also check `No CA certificate is required` to not validate. However, note that you are opening yourself up to potential man-in-the-middle attacks in the process.
+[^2]: Your NetID is your UIC email, minus the `@uic.edu`.
