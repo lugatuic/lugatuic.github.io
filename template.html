@@ -18,7 +18,7 @@ $if(description-meta)$
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 $for(css)$
-  <link rel="stylesheet" href="$css$" />
+  <link rel="stylesheet" type="text/css" href="$css$" />
 $endfor$
 $for(header-includes)$
   $header-includes$
@@ -26,11 +26,7 @@ $endfor$
 $if(math)$
   $math$
 $endif$
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="static/main.css" />
+  <link rel="icon" type="image/x-icon" href="$favicon$" />
 </head>
 <body>
 $for(include-before)$

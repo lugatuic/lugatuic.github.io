@@ -44,6 +44,7 @@ PANDOC_FILE_SPECIFIC=$(strip $($(basename $(notdir $^))_CMDS))
 # Pandoc Setup
 PANDOC_FLAGS := --template template.html # Template to use
 PANDOC_FLAGS += -s # Standalone document
+PANDOC_FLAGS += --metadata-file metadata.yml
 PANDOC = pandoc $(PANDOC_FLAGS) # final pandoc command
 
 # Mirror directory structure of content
