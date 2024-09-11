@@ -38,9 +38,9 @@ xmlns:atom="http://www.w3.org/2005/Atom">
         </p>
 
         <p>
-          <xsl:value-of select="summary" />
-          <!-- Maybe add location sometime... -->
-          <!-- <strong>Location: </strong><xsl:value-of select="location" /> -->
+          <xsl:value-of select="description" />
+          <br/>
+          <strong>Location: </strong><xsl:value-of select="location" />
         </p>
 
       </xsl:for-each>
