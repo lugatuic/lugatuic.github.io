@@ -3,11 +3,8 @@ author:
 - Kevin Cordero
 date: October 1st, 2024
 subtitle: LUG x WICS workshop
-title: Personal Website Workshops
+title: Personal Website Workshop
 ---
-
-# Personal Website Workshop
-Design to Deployment
 
 ## Introductions
 Hi! I’m Nandana  
@@ -29,24 +26,24 @@ Hi. I'm Kevin
 ## Our Credentials
 
 Here are our personal websites:  
-Nandana : https://nandana.dev  
-Kevin : https://olympicene.dev
+Nandana : [https://nandana.dev](https://nandana.dev)  
+Kevin : [https://olympicene.dev](https://olympicene.dev)  
 
 Here are some other personal website from our friends we thought you might like:  
-Flori (WiCS Dev Lead) : https://cheetodustflori.github.io/Personal-Website  
-Megha Nayar (UIC student) : https://meghanayar.com
+Flori (WiCS Dev Lead) : [https://cheetodustflori.github.io/Personal-Website  ](https://cheetodustflori.github.io/Personal-Website)  
+Megha Nayar (UIC student) : [https://meghanayar.com](https://meghanayar.com)  
 
 ## Expectations
 __This is not a tutorial.__ We're not gonna teach you React or any other framework.  
-We're going over the process of building a person website from inspiration, design, developement, and deployment. In addition we'll give you some structure on where to start as well as some additional resources/ general advice.
+We're going over the process of building a person website from inspiration, design, development, and deployment. In addition we'll give you some structure on where to start as well as some additional resources/ general advice.
 
 ## Why should you build your own website?
 It's a personal showcase of you. You can show off literally anything. Past projects, your resume/achievements, a blog, games, links to other social media.   
-It's also a great side project to begin with. We all want to build our own projects outside of school and a personal website is a great place to start. A static website is one of hte simplest things to build.  
+It's also a great side project to begin with. We all want to build our own projects outside of school and a personal website is a great place to start. A static website is one of the simplest things to build.  
 __Also, recruiters love it.__  
 Every Internship application asks for a 'Personal Website URL'
 
-## Why not just use Workpress/Squarespace
+## Why not just use Wordpress/Squarespace
 Three main reasons. First off you miss out on important technical skills. The experience you gain from creating designing and deploying a website is huge. Second is you are limited in your creativity. You can make whatever you want and using a tool only limits what you can do. If you know the tools you can literally make whatever you want. And lastly is paywalls. All these tools are open source why should you pay for using them?
 
 ## Build Process
@@ -56,19 +53,19 @@ Three main reasons. First off you miss out on important technical skills. The ex
 Everyone needs inspiration don't just copy entire websites, steal individual ideas.  
 
 Kevin's Inspiration:  
-- https://ttntm.me/  
-- http://bettermotherfuckingwebsite.com/  
+- [https://ttntm.me/](https://ttntm.me/)  
+- [http://bettermotherfuckingwebsite.com/](http://bettermotherfuckingwebsite.com/)  
 - Kept track of their inspiration with a list of bookmarks gathered in a doc.  
 
 Nandana’s Inspiration:  
-- https://v4.brittanychiang.com/  
-- https://www.taniarascia.com/  
+- [https://v4.brittanychiang.com/](https://v4.brittanychiang.com/)  
+- [https://www.taniarascia.com/](https://www.taniarascia.com/)  
 - Kept track of ideas through Figma  
 
 Other Resources for Inspiration:  
-- https://aboutideasnow.com  
+- [https://aboutideasnow.com](https://aboutideasnow.com)  
 An index of other personal websites  
-- https://webdesignmuseum.org  
+- [https://webdesignmuseum.org](https://webdesignmuseum.org)  
 See how design has changed over time  
 
 ### Design
@@ -83,14 +80,14 @@ Kevin's Design Start:
 
 
 Nandana’s Design Start:  
-- Knew what I wanted to show first: Aboue me, Experience, Projects, Resume, Leadership  
+- Knew what I wanted to show first: About me, Experience, Projects, Resume, Leadership  
 - Drew abstracts ideas of what each page should look based off inspiration  
 
 After putting some ideas on paper, you have to decide more general aspects of your website. For example:
 
-Color Pallete: https://coolors.co  
-Contrast Check: https://realtimecolors.com  
-Fonts: https://fonts.google.com
+Color Pallete: [https://coolors.co](https://coolors.co)  
+Contrast Check: [https://realtimecolors.com](https://realtimecolors.com)  
+Fonts: [https://fonts.google.com](https://fonts.google.com)
 
 Design Demos:  
 - [Kevin](https://www.figma.com/design/CwnoFYCbos76AovTIW4UKO/Personal-Website?node-id=0-1&node-type=canvas&t=Cx83TCAhhvU5Guix-0)  
@@ -111,9 +108,9 @@ It’s not a priority but a concise vision really makes development easy
 
 How to learn Figma? Just play around with it, its very intuitive. You may want to look at a tutorial but you really don't need to finish it to begin prototyping on Figma.
 
-### Developement
+### Development
 
-The first, arguably most important step in developement is choosing a tech stack.  What is a tech stack? In the broad strokes a tech stack is __the set of programming tools and languages that you use to build a project__.
+The first, arguably most important step in development is choosing a tech stack.  What is a tech stack? In the broad strokes a tech stack is __the set of programming tools and languages that you use to build a project__.
 
 Nandana's Tech Stack:  
 - React.js  
@@ -135,7 +132,7 @@ Astro is a framework used for coding out the website. Its similar to react in ho
 
 Typescript is used in lieu of Javascript because of developer preference for static typing.
 
-SCSS is for styling and simplies CSS inheritence for a smoother developement experience.
+SCSS is for styling and simplies CSS inheritence for a smoother development experience.
 
 However you do not need to use any/all of these technologies.  
 
@@ -167,19 +164,19 @@ What does it mean to deploy a website?
 
 When you create a website you are only editing it locally, on your computer. Only you can see this website.
 
-When you deploy the website in public you make it so that your website is publicly visible, usually through a Domain Name like https://google.com or https://amazon.us.  
+When you deploy the website in public you make it so that your website is publicly visible, usually through a Domain Name like [https://google.com](https://google.com) or [https://amazon.us](https://amazon.us).  
 
-Domain names usually cost money - but some sites will let you use theirs for free EX. https://cheetodustflori.github.io/Personal-Website/
+Domain names usually cost money - but some sites will let you use theirs for free EX. [https://cheetodustflori.github.io/Personal-Website/](https://cheetodustflori.github.io/Personal-Website/)
 
 What did we use to deploy our site?
 
 Kevin's Deployment:  
 - Github Pages - free  
 - I linked it with my own domain that I bought through porkbun.com/.   
-- How to deploy using Github Pages : https://docs.github.com/en/pages/quickstart  
+- How to deploy using Github Pages : [https://docs.github.com/en/pages/quickstart](https://docs.github.com/en/pages/quickstart)  
 - Very easy, no configuration necessary  
 
-Nanadana's Deployment
+Nandana's Deployment
 - Deployed using Amazon Web Services on an ubuntu instance of Lightsail.  
 - You rent cloud space from Amazon (which is Amazon’s computer) and I used that to self host using Nginx.  
 - This was harder, took me a while to figure out but I really wanted to learn how it works.   
