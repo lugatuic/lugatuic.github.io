@@ -10,21 +10,21 @@ title: Personal Website Workshops
 Design to Deployment
 
 ## Introductions
-Hi! I’m Nandana
-- Senior majoring in CS
-- Co-President of WiCS
-- Might have been your 251 TA
-- Likes coding
-- Might be bad at it
-- Built my personal website this summer!
+Hi! I’m Nandana  
+- Senior majoring in CS  
+- Co-President of WiCS  
+- Might have been your 251 TA  
+- Likes coding  
+- Might be bad at it  
+- Built my personal website this summer!  
 
 Hi. I'm Kevin
-- Senior majoring in CS
-- Treasurer of LUG
-- Might be your 341 TA
-- Likes Linux
-- Might be good at it
-- Also built my personal website this summer.
+- Senior majoring in CS  
+- Treasurer of LUG  
+- Might be your 341 TA  
+- Likes Linux  
+- Might be good at it  
+- Also built my personal website this summer.  
 
 ## Our Credentials
 
@@ -55,35 +55,36 @@ Three main reasons. First off you miss out on important technical skills. The ex
 
 Everyone needs inspiration don't just copy entire websites, steal individual ideas.  
 
-Kevin's Inspiration:
-- https://ttntm.me/
-- http://bettermotherfuckingwebsite.com/
-- Kept track of their inspiration with a list of bookmarks gathered in a doc.
+Kevin's Inspiration:  
+- https://ttntm.me/  
+- http://bettermotherfuckingwebsite.com/  
+- Kept track of their inspiration with a list of bookmarks gathered in a doc.  
 
-Nandana’s Inspiration:
-- https://v4.brittanychiang.com/
-- https://www.taniarascia.com/
-- Kept track of ideas through Figma
+Nandana’s Inspiration:  
+- https://v4.brittanychiang.com/  
+- https://www.taniarascia.com/  
+- Kept track of ideas through Figma  
 
-Other Resources for Inspiration:
-- https://aboutideasnow.com An index of other personal websites
-- https://webdesignmuseum.org
-See how design has changed over time
+Other Resources for Inspiration:  
+- https://aboutideasnow.com  
+An index of other personal websites  
+- https://webdesignmuseum.org  
+See how design has changed over time  
 
 ### Design
 
 [Figma](https://www.figma.com/) is a powerful tool for designing websites. Both of us used Figma, but neither of use started in Figma
 
-Kevin's Design Start:
-- Did not have a clear ideas of what I wanted
-- Combined components of sites that I was inspired by
-- Slowly understood what I liked
-- Finalized on having Blog, Links,Projects, and Resume,
+Kevin's Design Start:  
+- Did not have a clear ideas of what I wanted  
+- Combined components of sites that I was inspired by  
+- Slowly understood what I liked  
+- Finalized on having Blog, Links,Projects, and Resume,  
 
 
-Nandana’s Design Start:
-- Knew what I wanted to show first: Aboue me, Experience, Projects, Resume, Leadership
-- Drew abstracts ideas of what each page should look based off inspiration
+Nandana’s Design Start:  
+- Knew what I wanted to show first: Aboue me, Experience, Projects, Resume, Leadership  
+- Drew abstracts ideas of what each page should look based off inspiration  
 
 After putting some ideas on paper, you have to decide more general aspects of your website. For example:
 
@@ -91,11 +92,12 @@ Color Pallete: https://coolors.co
 Contrast Check: https://realtimecolors.com  
 Fonts: https://fonts.google.com
 
-Design Demos:
-- [Kevin](https://www.figma.com/design/CwnoFYCbos76AovTIW4UKO/Personal-Website?node-id=0-1&node-type=canvas&t=Cx83TCAhhvU5Guix-0)
-- [Nandana](https://www.figma.com/design/1vmCPqD24Zb9LzfLAcdZyr/nandana.dev?node-id=0-1&t=H7UbAPrrVmPziP4z-1)
-- [Flori](https://www.figma.com/design/IWHFUp2ntpZHx991wrDvN3/personal-website?node-id=0-1&t=nXk7Asqfz5NJfdCU-1)
+Design Demos:  
+- [Kevin](https://www.figma.com/design/CwnoFYCbos76AovTIW4UKO/Personal-Website?node-id=0-1&node-type=canvas&t=Cx83TCAhhvU5Guix-0)  
+- [Nandana](https://www.figma.com/design/1vmCPqD24Zb9LzfLAcdZyr/nandana.dev?node-id=0-1&t=H7UbAPrrVmPziP4z-1)  
+- [Flori](https://www.figma.com/design/IWHFUp2ntpZHx991wrDvN3/personal-website?node-id=0-1&t=nXk7Asqfz5NJfdCU-1)  
 
+  
 General Notes:
 
 Design with Intention -
@@ -113,10 +115,10 @@ How to learn Figma? Just play around with it, its very intuitive. You may want t
 
 The first, arguably most important step in developement is choosing a tech stack.  What is a tech stack? In the broad strokes a tech stack is __the set of programming tools and languages that you use to build a project__.
 
-Nandana's Tech Stack:
-- React.js
-- Tailwind CSS
-- p5.js
+Nandana's Tech Stack:  
+- React.js  
+- Tailwind CSS  
+- p5.js  
 
 React is a javascript frame work that helps you code out the website. All a developer needs to know is that it makes HTML reuse a lot easier.  
 
@@ -124,10 +126,10 @@ Tailwind helps with styling within HTML. It makes CSS in less lines and was used
 
 p5.js was used for animations. It's a javscript library that helps you make cool graphics. She learnt it through her ART 151 class.
 
-Kevin's Tech Stack:
-- Astro.js
-- Typescript
-- SCSS
+Kevin's Tech Stack:  
+- Astro.js  
+- Typescript  
+- SCSS  
 
 Astro is a framework used for coding out the website. Its similar to react in how it makes component reuse easier. It also optimizes pages for loading faster as well as allowing you to use different frameworks like React, Vue, and Svelt all at once.
 
@@ -139,16 +141,16 @@ However you do not need to use any/all of these technologies.
 
 You can make a good looking site even just with HTML and CSS 
 
-We chose our tech stack because…
-- It was what we were familiar with
-- A need for Intractability
-- Seeking flexibility for - unforeseen changes
-- Ease of deployment
-- Wanting to learn something new
-- All the cool kids use this new tool
-- Changing things about - Javascript we didn't like
-- Adding features we miss from other languages
-etc. 
+We chose our tech stack because…  
+- It was what we were familiar with  
+- A need for Intractability  
+- Seeking flexibility for - unforeseen changes  
+- Ease of deployment  
+- Wanting to learn something new  
+- All the cool kids use this new tool  
+- Changing things about - Javascript we didn't like  
+- Adding features we miss from other languages  
+etc.   
 
 There is also an external Tech Stack, comprised of all the tools we used to help us write the website in the first place.
 
@@ -171,17 +173,17 @@ Domain names usually cost money - but some sites will let you use theirs for fre
 
 What did we use to deploy our site?
 
-Kevin's Deployment:
-- Github Pages - free
-- I linked it with my own domain that I bought through porkbun.com/. 
-- How to deploy using Github Pages : https://docs.github.com/en/pages/quickstart
-- Very easy, no configuration necessary
+Kevin's Deployment:  
+- Github Pages - free  
+- I linked it with my own domain that I bought through porkbun.com/.   
+- How to deploy using Github Pages : https://docs.github.com/en/pages/quickstart  
+- Very easy, no configuration necessary  
 
 Nanadana's Deployment
-- Deployed using Amazon Web Services on an ubuntu instance of Lightsail. 
-- You rent cloud space from Amazon (which is Amazon’s computer) and I used that to self host using Nginx.
-- This was harder, took me a while to figure out but I really wanted to learn how it works. 
-- Here is my notion guide
+- Deployed using Amazon Web Services on an ubuntu instance of Lightsail.  
+- You rent cloud space from Amazon (which is Amazon’s computer) and I used that to self host using Nginx.  
+- This was harder, took me a while to figure out but I really wanted to learn how it works.   
+- Here is my notion guide  
 
 We recommend two main ways of deploying your website.
 
