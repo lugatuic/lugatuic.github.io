@@ -1,7 +1,7 @@
 ---
 author:
 - Kevin Cordero
-date: October 1rd, 2024
+date: October 1st, 2024
 subtitle: LUG x WICS workshop
 title: Personal Website Workshops
 ---
