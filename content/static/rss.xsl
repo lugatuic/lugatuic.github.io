@@ -30,12 +30,16 @@ xmlns:atom="http://www.w3.org/2005/Atom">
         <xsl:variable name="y" select="$year - $a"/>
         <xsl:variable name="m" select="$month + 12 * $a - 2"/>
 
+
         <xsl:variable name="dayofweek" select="($day + $y + floor($y div 4) - floor($y div 100) + floor($y div 400) + floor((31 * $m) div 12)) mod 7"/>
 
         <item>
           <title>
             <xsl:value-of select="summary" />
           </title>
+		  <description>
+			<xsl:value-of select="description" />
+		  </description>
           <pubDate>
             <!-- FUCK RFC822, RSS DOESN'T EVEN IMPLEMENT IT RIGHT -->
             <xsl:value-of select="substring($days, ($dayofweek + 1) * 3, 3)"/>
