@@ -1,3 +1,4 @@
+<!-- - President: [Ethan Wong](mailto:ewong25@uic.edu) -->
 ---
 author: Neko
 email: lowpolyneko@protonmail.ch
@@ -5,11 +6,9 @@ date: February 26th, 2024
 title: Contact Us
 ---
 # Current Board
-- President: [Ethan Wong](mailto:ewong25@uic.edu)
+- President: [Michael Khan](mailto:mkhan398@uic.edu)
 - Vice President: [Jacob Cohen](mailto:jcohen30@uic.edu)
-- Treasurer: [Kevin Cordero](mailto:kcord2@uic.edu)
-- Officer: [Michael Khan](mailto:mkhan398@uic.edu)
-- Officer: [Harshit Modi](mailto:hmodi5@uic.edu)
+- Treasurer: [Harshit Modi](mailto:hmodi5@uic.edu)
 
 If you wish to reach out to the board, feel free to either email us directly or
 through our listserv ([lug-officers@uic.edu](mailto:lug-officers@uic.edu)).
