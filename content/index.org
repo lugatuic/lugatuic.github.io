@@ -1,4 +1,4 @@
-#+title: Linux User's Group @ UIC
+#+title: Linux User Group @ UIC
 #+AUTHOR: Soham S Gumaste
 #+OPTIONS: toc:nil
 
