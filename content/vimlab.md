@@ -2,7 +2,7 @@
 author:
 - Ethan Wong
 date: October 13, 2023
-title: Vim
+title: VimLab Fall 2023
 ---
 
 # Metadata
