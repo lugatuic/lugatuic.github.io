@@ -153,20 +153,20 @@ What are coreutils?
 Common Examples
 
 <figure>
-<p><img src="cat.png" style="width:70.0%" alt="image" /> <img
-src="rm.png" style="width:70.0%" alt="image" /></p>
+<p><img src="/static/intro-to-cyber/cat.png" style="width:70.0%" alt="image" /> <img
+src="/static/intro-to-cyber/rm.png" style="width:70.0%" alt="image" /></p>
 <figcaption>rm</figcaption>
 </figure>
 
 <figure>
-<p><img src="ls.png" style="width:70.0%" alt="image" /> <img
-src="vi.png" style="width:70.0%" alt="image" /></p>
+<p><img src="/static/intro-to-cyber/ls.png" style="width:70.0%" alt="image" /> <img
+src="/static/intro-to-cyber/vi.png" style="width:70.0%" alt="image" /></p>
 <figcaption>vi</figcaption>
 </figure>
 
 <figure>
-<p><img src="mkdir.png" style="width:70.0%" alt="image" /> <img
-src="cd.png" style="width:70.0%" alt="image" /></p>
+<p><img src="/static/intro-to-cyber/mkdir.png" style="width:70.0%" alt="image" /> <img
+src="/static/intro-to-cyber/cd.png" style="width:70.0%" alt="image" /></p>
 <figcaption>cd</figcaption>
 </figure>
 
