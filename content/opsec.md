@@ -1,3 +1,8 @@
+---
+author: Kevin Cordero
+date: March 12th, 2025
+title: "Threat Modeling 101: Intro to Operational Security" 
+---
 # Metadata
 This is the markdown transcript for a presentation held on Tuesday, March 12th.
 
