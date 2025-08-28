@@ -26,8 +26,9 @@ provided by the university's CampusGroups service. Announcements have been
 superceded with the Discord and `lug@listserv.uic.edu` listserv instead.
 
 ## Location
-LUG shares an office with [ACM@UIC](https://acm.cs.uic.edu/) in SELE 2264 where
-most of the active members of both orgs hang out. Feel free to drop by!
+LUG shares an office with [ACM@UIC](https://acm.cs.uic.edu/) in
+[CDRLC](https://osm.org/go/ZUfI2rRnd--?way=1164024531) 2433 where most of the
+active members of both orgs hang out. Feel free to drop by!
 
 ---
 # vim: set tw=80
