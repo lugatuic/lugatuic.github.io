@@ -76,6 +76,7 @@ $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 all: $(HTMLFILES)
 	@echo -e "FILES: $(FILES) \nHTML: $(HTMLFILES)"
 	rsync -avzh $(CONTENT)/static/ $(PUBLIC)/static
+	rsync -avzh $(CONTENT)/*.html $(PUBLIC)
 	$(foreach s, $(SCRIPTS), $(shell $(s) $(HTMLFILES)))
 
 # Clean build folder
