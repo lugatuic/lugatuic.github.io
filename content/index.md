@@ -2,6 +2,7 @@
 title: Linux User Group @ UIC Homepage
 email: lug-officers@uic.edu
 author: Linux User Group @ UIC
+<<<<<<< HEAD
 header-includes: "<style> .title { font-size: 0px; } .navbar li { margin:auto; float:left; padding-right: 1.5em; font-size:24px;} </style>"
 ---
 
@@ -15,6 +16,20 @@ header-includes: "<style> .title { font-size: 0px; } .navbar li { margin:auto; f
   <li><a href="events.xml">`events`</a></li>
   <li><a href="rss.xml">`rss`</a></li>
   <li><a href="contact.html">`contact`</a></li>
+=======
+header-includes: "<style> .title { font-size: 0px; } </style>"
+---
+
+<div style="display: flex; justify-content: flex-start; padding-bottom: 20px; border-bottom: #dcdcdc solid 1px; width: fit-content;">
+  <img src="static/website-logo.png" style="height:220px; padding-right: 5%;" alt="The text 'Linux User Group' rendered vertically in large, monospace print."/>
+
+  <img src="static/tux_white.png" style="height:220px;" alt="A monochrome cartoon penguin rendered entirely in white."/>
+</div>
+<ul style="margin:0; padding:0; overflow:hidden;">
+  <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="sitemap.html">`sitemap`</a></li>
+  <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="events.xml">`events`</a></li>
+  <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="contact.html">`contact`</a></li>
+>>>>>>> 86fcd1a (Ported new index.html code to a markdown file with limited inline HTML.)
 </ul>
 
 # Welcome!
@@ -23,7 +38,11 @@ We are the **Linux User Group @ UIC**!
 
 Our website contains technical guides, archives of old event slide decks converted into articles, peeks into the org, and whatever other relevant things our members decide to add to this website!
 
+<<<<<<< HEAD
 If you want to get in contact with us, see our [contact page](contact.html) or look below!
+=======
+If you want to get in contact with us, see our contact page or look below!
+>>>>>>> 86fcd1a (Ported new index.html code to a markdown file with limited inline HTML.)
 
 # How to Join
 
@@ -33,8 +52,11 @@ The best ways to stay in contact with us be an active member are to:
 - Subscribe to our [Listserv](mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG)
 - Show up in person to our office in
 [CDRLC](https://osm.org/go/ZUfI2rRnd--?way=1164024531) 2433!
+<<<<<<< HEAD
 - Join the official [CampusGroups
 RSO](https://uic.campusgroups.com/linuxuser/club_signup)!
+=======
+>>>>>>> 86fcd1a (Ported new index.html code to a markdown file with limited inline HTML.)
 
 Typically, there is someone in the office from 9:00 AM to 5:00 PM.
 
