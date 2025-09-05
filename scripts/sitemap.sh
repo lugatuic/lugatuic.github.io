@@ -17,8 +17,9 @@ for files in $(echo "$@" | tr ' ' '\n' | sort -V); do
 
   # find title meta tag with awk
   TITLE="$(awk '/<title>/ {print $0}' $files)"
-  # abuses awk reformatting - just removes trailing & leading whitespace :)
-  TITLE="$(echo $TITLE | awk '{$1=$1};1')"
+  # AWK script for removing the <title> tags and all whitespace before and after the title on the title line.
+  # Thank you Jacob Cohen for making this!
+  TITLE="$(echo $TITLE | awk -v RS='</title>' -v FS='<title>' 'NR==1 && NF>1 { gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2 }')"
   # parameter expansion again, remove title html tags
   # e.g. <title>My Title</title> becomes "My Title"
   TITLE=${TITLE#<title>}
