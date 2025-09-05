@@ -13,6 +13,7 @@ header-includes: "<style> .title { font-size: 0px; } </style>"
 <ul style="margin:0; padding:0; overflow:hidden;">
   <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="sitemap.html">`sitemap`</a></li>
   <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="events.xml">`events`</a></li>
+  <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="rss.xml">`rss`</a></li>
   <li style="margin:auto; float:left; padding-right: 5%; font-size:24px;"><a href="contact.html">`contact`</a></li>
 </ul>
 
@@ -23,8 +24,6 @@ We are the **Linux User Group @ UIC**!
 Our website contains technical guides, archives of old event slide decks converted into articles, peeks into the org, and whatever other relevant things our members decide to add to this website!
 
 If you want to get in contact with us, see our [contact page](contact.html) or look below!
-Additionally, we have an [Event RSS Feed](rss.xml) if you want to stay up to
-date without checking this constantly!
 
 # How to Join
 
