@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 206" width="216" height="206">
+	<title>website-logo</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 78px;fill: #dcdcdc;font-weight: 400;font-family: "JetBrainsMono-Regular", "JetBrains Mono" } 
+		.t1 { font-size: 77px;fill: #dcdcdc;font-weight: 400;font-family: "JetBrainsMono-Regular", "JetBrains Mono" } 
+	</style>
+	<text id="LINUX" style="transform: matrix(.973,0,0,1,-8.785,56)" >
+		<tspan x="0" y="0" class="t0">LINUX
+</tspan>
+	</text>
+	<text id="USER" style="transform: matrix(1,0,0,1,-6,132)" >
+		<tspan x="0" y="0" class="t1">U</tspan><tspan  y="0" class="t1">S</tspan><tspan  y="0" class="t1">E</tspan><tspan  y="0" class="t1">R
+</tspan>
+	</text>
+	<text id="GROUP" style="transform: matrix(.973,0,0,1,-5.838,205)" >
+		<tspan x="0" y="0" class="t1">G</tspan><tspan  y="0" class="t1">R</tspan><tspan  y="0" class="t1">O</tspan><tspan  y="0" class="t1">U</tspan><tspan  y="0" class="t1">P
+</tspan>
+	</text>
+</svg>
