@@ -22,7 +22,9 @@ We are the **Linux User Group @ UIC**!
 
 Our website contains technical guides, archives of old event slide decks converted into articles, peeks into the org, and whatever other relevant things our members decide to add to this website!
 
-If you want to get in contact with us, see our contact page or look below!
+If you want to get in contact with us, see our [contact page](contact.html) or look below!
+Additionally, we have an [Event RSS Feed](rss.xml) if you want to stay up to
+date without checking this constantly!
 
 # How to Join
 
@@ -32,6 +34,8 @@ The best ways to stay in contact with us be an active member are to:
 - Subscribe to our [Listserv](mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG)
 - Show up in person to our office in
 [CDRLC](https://osm.org/go/ZUfI2rRnd--?way=1164024531) 2433!
+- Join the official [CampusGroups
+RSO](https://uic.campusgroups.com/linuxuser/club_signup)!
 
 Typically, there is someone in the office from 9:00 AM to 5:00 PM.
 
