@@ -17,7 +17,7 @@ When attempting to connect to the network, you will be prompted for the followin
 | Field | Input |
 | ----- | ----- |
 | EAP Method | Protected EAP (PEAP) |
-| Phase 2 Authentication | MSCHAP |
+| Phase 2 Authentication | MSCHAPv2 |
 | CA Certificate | Select from file -> `/etc/ssl/certs/ca-certificates.crt` [^1] |
 | Domain | uic.edu |
 | Identity | **Your UIC NetID** [^2]|
