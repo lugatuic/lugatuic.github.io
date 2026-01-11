@@ -10,6 +10,8 @@ title: ThinkPads 2025
 This is the markdown transcript for a presentation held on November 20th. You
 can find the writeup in PDF format [here](https://github.com/lowpolyneko/thinkpads-2025/blob/main/thinkpads-2025.handout.pdf).
 
+![Poster](static/thinkpads-2025/thinkpadposter.png)
+
 ## Video Recording
 
 <iframe width="905" height="509" src="https://www.youtube.com/embed/xJaMFnleSQQ" title="Ethan Wong LUG Thinkpads workshop Partial Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
