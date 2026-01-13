@@ -14,7 +14,7 @@ can find the writeup in PDF format [here](https://github.com/lowpolyneko/thinkpa
 
 ## Video Recording
 
-<iframe width="905" height="509" src="https://www.youtube.com/embed/xJaMFnleSQQ" title="Ethan Wong LUG Thinkpads workshop Partial Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/xJaMFnleSQQ' frameborder='0' allowfullscreen></iframe></div>
 
 # About Me
 
