@@ -5,6 +5,32 @@ email: ewong@anl.gov
 title: ThinkPads 2025
 ---
 
+<style>
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .embed-container iframe, .embed-container object, .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rotate270 {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+</style>
+
 # Metadata
 
 This is the markdown transcript for a presentation held on November 20th. You
@@ -14,7 +40,7 @@ can find the writeup in PDF format [here](https://github.com/lowpolyneko/thinkpa
 
 ## Video Recording
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/xJaMFnleSQQ' frameborder='0' allowfullscreen></iframe></div>
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/xJaMFnleSQQ' frameborder='0' allowfullscreen></iframe></div>
 
 # About Me
 
@@ -45,7 +71,7 @@ So. I have a bit of a problem\...
 
 I own *too* many ThinkPads.
 
-![Current Collection (downsized)](static/thinkpads-2025/collection.jpg){width="75%"}
+![Current Collection (downsized)](static/thinkpads-2025/collection.jpg){width="75%" class="rotate270"}
 
 ## What are ThinkPads?
 
