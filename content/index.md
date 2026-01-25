@@ -11,6 +11,7 @@ header-includes: "<style> .title { font-size: 0px; } .navbar li { margin:auto; f
   <img src="static/tux_white.svg" style="height:220px;" alt="A monochrome cartoon penguin rendered entirely in white."/>
 </div>
 <ul class="navbar" style="margin:0; padding:0; overflow:hidden;">
+  <li><a href="calendar.html">`calendar`</a></li>
   <li><a href="sitemap.html">`sitemap`</a></li>
   <li><a href="events.xml">`events`</a></li>
   <li><a href="rss.xml">`rss`</a></li>
