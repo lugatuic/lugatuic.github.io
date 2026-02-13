@@ -1,0 +1,6 @@
+### This is the calendar of Linux User Group. Add it to your Google Calendar to not miss any event updates.
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=aG1vZGk1QHVpYy5lZHU&src=Y180M2YwOTBlZDA5N2JkMzU1MDFlNDZlNjFiYjU3Y2I4OTkzZTVhOTBkY2IxNmQ0ODIzYTA3NjE1MjE3NTA0YjBmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18zZGYzMDhlNTAzNTQ1MTY4ZmIzYmZiYjcxNmIxMTNlYWNhMzlkZDc4ZDcwNWE1M2YxMDUwMWE1YmEyZTJmNWM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kMDI1ZGE2ZGQxMmVlZjYzNWMzZWFhZGFhNWYyOGVjNDVjOTg1MjNjZDUyNDFmNzI0OGRhNjc2MzJmODUyMmZmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18xYjUyMTFjZTk2YWYzNTY3ZWQyMjNmOTI3MDNkOTNjYjA3ZTVjM2ZmZmM0M2YwYjhjZWEzMjNmMTMxZjQ3MDE4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%233f51b5&color=%23b39ddb&color=%23009688&color=%23e67c73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+If you use any other mail provider , you can import  [ics file](https://calendar.google.com/calendar/ical/c_d025da6dd12eef635c3eaadaa5f28ec45c98523cd5241f7248da67632f8522ff%40group.calendar.google.com/public/basic.ics) too.
