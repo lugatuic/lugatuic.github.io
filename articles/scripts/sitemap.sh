@@ -31,4 +31,4 @@ for files in $(echo "$@" | tr ' ' '\n' | sort -V); do
   LINKS="${LINKS}${TMP}"
 done
 
-pandoc -s --template template.html --metadata-file metadata.yml --metadata-file sitemap.yml -o public/sitemap.html <<<"${LINKS}"
+pandoc -s --template template.html --metadata-file metadata.yml --metadata-file sitemap.yml -o public/articles.html <<<"${LINKS}"

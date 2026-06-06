@@ -62,7 +62,10 @@ $(foreach d, $(DIRS_PUBLIC), $(shell mkdir -p $(d)))
 
 define MAKE_HTML
 
-$(PUBLIC)/%.html: $(join $(CONTENT)/%, $(1))
+$(PUBLIC):
+	mkdir -p $$@
+
+$(PUBLIC)/%.html: $(join $(CONTENT)/%, $(1)) | $(PUBLIC)
 	$(PANDOC) $$(PANDOC_FILE_SPECIFIC) $$^ -o $$@
 
 endef

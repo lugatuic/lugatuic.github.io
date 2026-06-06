@@ -31,6 +31,9 @@ jobs:
       - name: Check out
         uses: actions/checkout@v1
 
+      - name: Updating before install
+        run: sudo apt update -y
+
       - name: Install pandoc and make
         run: sudo apt install pandoc make --yes
         
