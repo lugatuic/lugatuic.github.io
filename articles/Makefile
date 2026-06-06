@@ -75,7 +75,9 @@ $(foreach i, $(EXT), $(eval $(call MAKE_HTML, $(i))))
 # Build website
 all: $(HTMLFILES)
 	@echo -e "FILES: $(FILES) \nHTML: $(HTMLFILES)"
+	# Sync static content so that it may be relatively referenced, rather than absolutely.
 	rsync -avzh $(CONTENT)/static/ $(PUBLIC)/static
+	# Execute every script in the scripts directory. 
 	$(foreach s, $(SCRIPTS), $(shell $(s) $(HTMLFILES)))
 
 # Clean build folder
