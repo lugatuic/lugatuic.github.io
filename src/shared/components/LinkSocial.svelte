@@ -3,16 +3,17 @@
 </script>
 <style>
     .link-icon {
+        display: flex;
+        align-items: center;
+        width: 32px;
+        height: 32px;
         transition: 250ms;
-        cursor: pointer;
-        background: var(--yellow);
-        border: none;
-        text-decoration: none;
-        color: var(--background);
     }
 
-    .link-icon:hover {
-        background: var(--dark-yellow);
+    .link-icon > img {
+        width: 100%;
     }
 </style>
-<a class="link-icon" href={props.link}></a>
+<a class="link-icon" href={props.link}>
+    <img src="/icons/{props.icon}_logo.svg" alt="{props.icon}" />
+</a>

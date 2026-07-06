@@ -5,18 +5,20 @@
 </script>
 <style>
     .content {
-        max-width: 1024px;
-        margin: auto;
+        /* max-width: 1024px;
+        margin: auto; */
+        margin: 0px;
+        top: 0px;
     }
 
-    footer {
+    /* footer {
         padding: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 64px;
         background-color: var(--dark-background);
-    }
+    } */
 </style>
 
 <svelte:head>
@@ -27,6 +29,6 @@
     {@render children()}
 </div>
 
-<footer>
+<!-- <footer>
     
-</footer>
+</footer> -->
