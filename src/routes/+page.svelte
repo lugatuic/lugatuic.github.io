@@ -50,7 +50,81 @@
     }
 
     .overview-container {
-        height: 1024px;
+        margin-top: 64px;
+        line-height: 32px;
+    }
+
+    .events-overview {
+        display: flex;
+    }
+
+    .events-overview > div {
+        flex: 1 1 0px;
+    }
+
+    .event-pics-container {
+        position: relative;
+    }
+
+    .event-pics-container > div {
+        position: absolute;
+        width: 240px;
+        padding: 16px 16px 32px 16px;
+        background-color: #ffffff;
+        box-shadow: 2px 4px 19px -8px #000000;
+    }
+    
+    .event-pics-container > div > img {
+        width: 100%;
+    }
+
+    .pic-0 {
+        top: 3%;
+        left: 2%;
+        transform: rotateX(22deg) rotateY(-10deg) rotateZ(6deg);
+    }
+
+    .pic-1 {
+        top: 18%;
+        left: 49%;
+        transform: rotateX(8deg) rotateY(-9deg) rotateZ(0deg);
+    }
+
+    .pic-2 {
+        top: 43%;
+        left: 19%;
+        transform: rotateX(-26deg) rotateY(5deg) rotateZ(2deg);
+    }
+
+    .groups-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .groups-container > div {
+        display: flex;
+        width: 50%;
+        gap: 16px;
+    }
+
+    .group-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .group-image > img {
+        width: 96px;
+    }
+
+    .light-section {
+        width: 100%;
+        background: yellow;
+    }
+
+    .light-section > .content-container {
+        padding: 0px 32px 0px 32px;
+        background-color: var(--white);
+        color: var(--background);
     }
 
     li {
@@ -118,31 +192,89 @@
 </div>
 <div class="overview-container content-container">
     <div class="events-overview">
-        <h2>Events</h2>
+        <div>
+            <h2>What we do:</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+        <div class="event-pics-container">
+            <div class="pic-0">
+                <img src="https://placehold.co/500x400" alt="event">
+            </div>
+            <div class="pic-1">
+                <img src="https://placehold.co/500x400" alt="event">
+            </div>
+            <div class="pic-2">
+                <img src="https://placehold.co/500x400" alt="event">
+            </div>
+        </div>
     </div>
     <div class="groups-overview">
-        <h2>Groups</h2>
+        <h2>Our groups:</h2>
+        <div class="groups-container">
+            <div>
+                <div class="group-image">
+                    <img src="https://placehold.co/320x320" alt="cube" />
+                </div>
+                <div>
+                    <h3>CTF Group</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="group-image">
+                    <img src="https://placehold.co/320x320" alt="cube" />
+                </div>
+                <div>
+                    <h3>Cubing Group</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="group-image">
+                    <img src="https://placehold.co/320x320" alt="cube" />
+                </div>
+                <div>
+                    <h3>Homebrew Group</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="projects-overview">
-        <h2>Projects</h2>
+    <!-- <div class="projects-overview">
+        <div>
+            <h2>Projects we made:</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+    </div> -->
+</div>
+<div class="light-section">
+    <div class="join-container content-container">
+        <h2 id="join">How to Join</h2>
+        <p>The best ways to stay in contact with us and to be an active member are to:</p>
+        <ul>
+            <li>Join our <a href="https://discord.gg/Edrb8ASX7m">Discord Server</a></li>
+            <li>Subscribe to our <a href="mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG">Listserv</a></li>
+            <li>Show up in person to our office in <a href="https://osm.org/go/ZUfI2rRnd--?way=1164024531">CDRLC</a> 2433</li>
+            <li>Join the official <a href="https://uic.campusgroups.com/linuxuser/club_signup">CampusGroups RSO</a></li>
+        </ul>
+        <p>Typically, there is someone in the office from 9:00 AM to 5:00 PM.</p>
     </div>
-</div>
-<div class="join-container content-container">
-    <h2 id="join">How to Join</h2>
-    <p>The best ways to stay in contact with us and to be an active member are to:</p>
-    <ul>
-        <li>Join our <a href="https://discord.gg/Edrb8ASX7m">Discord Server</a></li>
-        <li>Subscribe to our <a href="mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG">Listserv</a></li>
-        <li>Show up in person to our office in <a href="https://osm.org/go/ZUfI2rRnd--?way=1164024531">CDRLC</a> 2433</li>
-        <li>Join the official <a href="https://uic.campusgroups.com/linuxuser/club_signup">CampusGroups RSO</a></li>
-    </ul>
-    <p>Typically, there is someone in the office from 9:00 AM to 5:00 PM.</p>
-</div>
-<div class="events-container">
+    <div class="events-container">
 
-</div>
-<div class="articles-container">
+    </div>
+    <div class="articles-container">
 
+    </div>
 </div>
 <div class="main-page-footer">
     <div>
