@@ -121,6 +121,10 @@
         transform: rotateX(-26deg) rotateY(5deg) rotateZ(2deg);
     }
 
+    .groups-overview {
+        margin-top: 64px;
+    }
+
     .groups-container {
         display: flex;
         flex-wrap: wrap;
