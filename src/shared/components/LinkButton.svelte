@@ -3,6 +3,8 @@
 </script>
 <style>
     .link-button {
+        display: block;
+        width: fit-content;
         padding: 16px;
         font-size: 20px;
         font-weight: 600;

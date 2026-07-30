@@ -1,5 +1,5 @@
 <script>
-  import ArticlesList from "../shared/components/ArticlesList.svelte";
+    import ArticlesList from "../shared/components/ArticlesList.svelte";
     import EventsCalendar from "../shared/components/EventsCalendar.svelte";
     import LinkButton from "../shared/components/LinkButton.svelte";
     import LinkSocial from "../shared/components/LinkSocial.svelte";
@@ -348,7 +348,7 @@
             <img src="https://placehold.co/64x64" alt="icon" />
             <h2 id="articles">Recent Articles</h2>
         </div>
-        <ArticlesList count=10 />
+        <ArticlesList count=5 />
     </div>
     <div class="main-page-footer">
         <div>

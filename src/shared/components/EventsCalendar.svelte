@@ -2,10 +2,9 @@
     import { onMount } from "svelte";
 
     let props = $props();
-
     let eventsList = $state([]);
 
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const getDateText = (timestamp) => {
         const date = new Date(timestamp);
         const month = months[date.getMonth()];
@@ -20,7 +19,7 @@
 <style>
     .calendar {
         margin-top: 32px;
-        width: calc(100%);
+        width: 100%;
         background-color: green;
     }
 
