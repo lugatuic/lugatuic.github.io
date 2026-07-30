@@ -9,14 +9,14 @@
         transition: 250ms;
         position: relative;
         cursor: pointer;
-        background: var(--yellow);
+        background: yellow;
         border: none;
         text-decoration: none;
         color: var(--background);
     }
 
     .link-button:hover {
-        background: var(--dark-yellow);
+        background: orange;
     }
 </style>
 <a class="link-button" href={props.link}>{props.text}</a>

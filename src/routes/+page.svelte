@@ -1,14 +1,39 @@
 <script>
+  import ArticlesList from "../shared/components/ArticlesList.svelte";
+    import EventsCalendar from "../shared/components/EventsCalendar.svelte";
     import LinkButton from "../shared/components/LinkButton.svelte";
     import LinkSocial from "../shared/components/LinkSocial.svelte";
     import SimpleLogo from "../shared/icons/SimpleLogo.svelte";
-    import UICLogo from "../shared/icons/UICLogo.svelte";
 </script>
 <style>
     h1 {
         font-size: 48px;
         padding-bottom: 32px;
         margin: 0px;
+    }
+
+    h2 {
+        margin: 0px;
+    }
+
+    li {
+        line-height: 32px;
+    }
+
+    .icon-header {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .icon-header > h2 {
+        font-size: 32px;
+    }
+
+    .icon-header > img {
+        height: 48px;
+        width: 48px;
     }
 
     .content-container {
@@ -50,7 +75,7 @@
     }
 
     .overview-container {
-        margin-top: 64px;
+        padding: 64px 0px 64px 0px;
         line-height: 32px;
     }
 
@@ -116,22 +141,50 @@
         width: 96px;
     }
 
+    .dark-section {
+        width: 100%;
+        background-color: var(--dark-background);
+        color: var(--light-color);
+    }
+    
+    .section-transition {
+        position: absolute;
+        width: 100%;
+        height: 128px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--dark-background) 100%);
+    }
+
     .light-section {
         width: 100%;
         background: yellow;
     }
 
     .light-section > .content-container {
-        padding: 0px 32px 0px 32px;
-        background-color: var(--white);
-        color: var(--background);
+        padding: 32px;
+        background-color: var(--light-background);
+        color: var(--dark-color);
     }
 
-    li {
-        line-height: 32px;
+    .join-container {
+        padding-top: 128px;
+        margin: auto;
+        width: 50%;
+    }
+
+    .join-container > .icon-header {
+        justify-content: center;
+    }
+
+    .join-container > .icon-header > img {
+        position: absolute;
+
+        /* temporary */
+        left: calc(50% - 160px);
     }
 
     .main-page-footer {
+        /* position: absolute;
+        bottom: 0px; */
         min-height: 512px;
         margin-top: 64px;
         display: flex;
@@ -139,6 +192,7 @@
         background-image: url("/images/chicago.webp");
         mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
         background-size: cover;
+        color: #ffffff;
         
         /* temp */
         filter: grayscale(1);
@@ -164,7 +218,7 @@
 
     .footer-social > a {
         display: block;
-        color: var(--white);
+        color: var(--light-color);
         text-align: right;
     }
 </style>
@@ -183,6 +237,7 @@
                 <LinkSocial link="#" icon="discord" />
                 <LinkSocial link="#" icon="instagram" />
                 <LinkSocial link="#" icon="github" />
+                <LinkSocial link="#" icon="email" />
             </div>
         </div>
         <div class="logo-container">
@@ -190,113 +245,128 @@
         </div>
     </div>
 </div>
-<div class="overview-container content-container">
-    <div class="events-overview">
-        <div>
-            <h2>What we do:</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
+<div class="dark-section">
+    <div class="overview-container content-container">
+        <div class="events-overview">
+            <div>
+                <h2>What we do:</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+            <div class="event-pics-container">
+                <div class="pic-0">
+                    <img src="https://placehold.co/500x400" alt="event">
+                </div>
+                <div class="pic-1">
+                    <img src="https://placehold.co/500x400" alt="event">
+                </div>
+                <div class="pic-2">
+                    <img src="https://placehold.co/500x400" alt="event">
+                </div>
+            </div>
         </div>
-        <div class="event-pics-container">
-            <div class="pic-0">
-                <img src="https://placehold.co/500x400" alt="event">
-            </div>
-            <div class="pic-1">
-                <img src="https://placehold.co/500x400" alt="event">
-            </div>
-            <div class="pic-2">
-                <img src="https://placehold.co/500x400" alt="event">
+        <div class="groups-overview">
+            <h2>Our groups:</h2>
+            <div class="groups-container">
+                <div>
+                    <div class="group-image">
+                        <img src="https://placehold.co/320x320" alt="cube" />
+                    </div>
+                    <div>
+                        <h3>CTF Group</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="group-image">
+                        <img src="https://placehold.co/320x320" alt="cube" />
+                    </div>
+                    <div>
+                        <h3>Cubing Group</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="group-image">
+                        <img src="https://placehold.co/320x320" alt="cube" />
+                    </div>
+                    <div>
+                        <h3>Homebrew Group</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- <div class="projects-overview">
+            <div>
+                <h2>Projects we made:</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </div> -->
     </div>
-    <div class="groups-overview">
-        <h2>Our groups:</h2>
-        <div class="groups-container">
-            <div>
-                <div class="group-image">
-                    <img src="https://placehold.co/320x320" alt="cube" />
-                </div>
-                <div>
-                    <h3>CTF Group</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="group-image">
-                    <img src="https://placehold.co/320x320" alt="cube" />
-                </div>
-                <div>
-                    <h3>Cubing Group</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="group-image">
-                    <img src="https://placehold.co/320x320" alt="cube" />
-                </div>
-                <div>
-                    <h3>Homebrew Group</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="projects-overview">
-        <div>
-            <h2>Projects we made:</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-        </div>
-    </div> -->
 </div>
 <div class="light-section">
-    <div class="join-container content-container">
-        <h2 id="join">How to Join</h2>
-        <p>The best ways to stay in contact with us and to be an active member are to:</p>
-        <ul>
-            <li>Join our <a href="https://discord.gg/Edrb8ASX7m">Discord Server</a></li>
-            <li>Subscribe to our <a href="mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG">Listserv</a></li>
-            <li>Show up in person to our office in <a href="https://osm.org/go/ZUfI2rRnd--?way=1164024531">CDRLC</a> 2433</li>
-            <li>Join the official <a href="https://uic.campusgroups.com/linuxuser/club_signup">CampusGroups RSO</a></li>
-        </ul>
-        <p>Typically, there is someone in the office from 9:00 AM to 5:00 PM.</p>
-    </div>
-    <div class="events-container">
-
-    </div>
-    <div class="articles-container">
-
-    </div>
-</div>
-<div class="main-page-footer">
-    <div>
-        <div>
-            <div class="footer-address">
-                CDRLC 2433<br>
-                Computer Design Research and Learning Center<br>
-                University of Illinois Chicago<br>
-                <br>
-                900 W Taylor Street<br>
-                Chicago, IL 60607
+    <div class="section-transition"></div>
+    <div class="content-container">
+        <div class="join-container">
+            <div class="icon-header">
+                <img src="https://placehold.co/64x64" alt="icon" />
+                <h2 id="join">How to Join</h2>
             </div>
-            <div>
-                <SimpleLogo style="height: 64px; margin-right: 16px" />
-                <UICLogo style="height: 64px" />
-            </div>
+            <p>The best ways to stay in contact with us and to be an active member are to:</p>
+            <ul>
+                <li>Join our <a href="https://discord.gg/Edrb8ASX7m">Discord Server</a></li>
+                <li>Subscribe to our <a href="mailto:listserv@uic.edu?body=SUBSCRIBE%20LUG">Listserv</a></li>
+                <li>Show up in person to our office in <a href="https://osm.org/go/ZUfI2rRnd--?way=1164024531">CDRLC</a> 2433</li>
+                <li>Join the official <a href="https://uic.campusgroups.com/linuxuser/club_signup">CampusGroups RSO</a></li>
+            </ul>
+            <p>Typically, there is someone in the office from 9:00 AM to 5:00 PM.</p>
         </div>
-        <div class="footer-social">
-            Find us on
-            <a href="#">GitHub</a>
-            <a href="#">Discord</a>
-            <a href="#">Instagram</a>
+    </div>
+    <div class="events-container content-container">
+        <div class="icon-header">
+            <img src="https://placehold.co/64x64" alt="icon" />
+            <h2 id="calendar">Events Calendar</h2>
+        </div>
+        <EventsCalendar />
+    </div>
+    <div class="articles-container content-container">
+        <div class="icon-header">
+            <img src="https://placehold.co/64x64" alt="icon" />
+            <h2 id="articles">Recent Articles</h2>
+        </div>
+        <ArticlesList count=10 />
+    </div>
+    <div class="main-page-footer">
+        <div>
+            <div>
+                <div class="footer-address">
+                    CDRLC 2433<br>
+                    Computer Design Research and Learning Center<br>
+                    University of Illinois Chicago<br>
+                    <br>
+                    900 W Taylor Street<br>
+                    Chicago, IL 60607
+                </div>
+                <div>
+                    <SimpleLogo style="height: 64px; margin-right: 16px" />
+                </div>
+            </div>
+            <div class="footer-social">
+                Find us on
+                <a href="#">GitHub</a>
+                <a href="#">Discord</a>
+                <a href="#">Instagram</a>
+            </div>
         </div>
     </div>
 </div>
