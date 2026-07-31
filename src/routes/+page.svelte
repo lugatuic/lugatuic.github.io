@@ -6,18 +6,28 @@
     import SimpleLogo from "../shared/icons/SimpleLogo.svelte";
 </script>
 <style>
+    * {
+        font-family: "Inter", sans-serif;
+    }
+
     h1 {
-        font-size: 48px;
         padding-bottom: 32px;
         margin: 0px;
+        font-size: 48px;
+        font-family: "IBM Plex Mono", monospace;
     }
 
     h2 {
+        font-family: "IBM Plex Mono", monospace;
         margin: 0px;
     }
+    
+    h3 {
+        font-family: "IBM Plex Mono", monospace;
+    }
 
-    li {
-        line-height: 32px;
+    p, li {
+        line-height: 1.75;
     }
 
     .icon-header {
@@ -39,14 +49,15 @@
     .content-container {
         max-width: 1024px;
         margin: auto;
+        padding: 0px 32px 0px 32px;
     }
 
     .desc {
         font-size: 20px;
         text-align: justify;
-        /* max-width: 512px; */
         padding-bottom: 64px;
         margin: 0px;
+        font-weight: 500;
     }
 
     .intro-container {
@@ -56,7 +67,6 @@
     }
 
     .subheader-container {
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -70,12 +80,21 @@
 
     .socials {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .socials > div {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 32px;
     }
 
     .overview-container {
-        padding: 64px 0px 64px 0px;
+        padding-top: 64px;
+        padding-bottom: 64px;
         line-height: 32px;
     }
 
@@ -89,11 +108,13 @@
 
     .event-pics-container {
         position: relative;
+        height: 300px;
     }
 
     .event-pics-container > div {
         position: absolute;
-        width: 240px;
+        width: 200px;
+        max-width: 40%;
         padding: 16px 16px 32px 16px;
         background-color: #ffffff;
         box-shadow: 2px 4px 19px -8px #000000;
@@ -116,13 +137,9 @@
     }
 
     .pic-2 {
-        top: 43%;
-        left: 19%;
+        top: 30%;
+        left: 24%;
         transform: rotateX(-26deg) rotateY(5deg) rotateZ(2deg);
-    }
-
-    .groups-overview {
-        margin-top: 64px;
     }
 
     .groups-container {
@@ -130,10 +147,16 @@
         flex-wrap: wrap;
     }
 
-    .groups-container > div {
+    .groups-container > a {
         display: flex;
         width: 50%;
         gap: 16px;
+        color: var(--light-color);
+        text-decoration: none;
+    }
+
+    .groups-container > a > div > h3:hover {
+        text-decoration: underline;
     }
 
     .group-image {
@@ -183,12 +206,10 @@
         position: absolute;
 
         /* temporary */
-        left: calc(50% - 160px);
+        left: calc(50% - 180px);
     }
 
     .main-page-footer {
-        /* position: absolute;
-        bottom: 0px; */
         min-height: 512px;
         margin-top: 64px;
         display: flex;
@@ -198,8 +219,12 @@
         background-size: cover;
         color: #ffffff;
         
-        /* temp */
+        /* temporary */
         filter: grayscale(1);
+    }
+
+    .main-page-footer * {
+        font-family: "IBM Plex Mono", monospace;
     }
 
     .main-page-footer > div {
@@ -225,6 +250,46 @@
         color: var(--light-color);
         text-align: right;
     }
+
+    @media screen and (width < 1024px) {
+        .logo-container {
+            display: none;
+        }
+
+        .events-overview {
+            flex-direction: column;
+        }
+
+        .events-overview > div {
+            flex: auto;
+        }
+
+        .event-pics-container {
+            margin-bottom: 32px;
+        }
+
+        .groups-container {
+            flex-direction: row;
+        }
+
+        .groups-container > a {
+            width: auto;
+        }
+    }
+    
+    @media screen and (width < 768px) {
+        .socials {
+            justify-content: center;
+        }
+
+        .join-container {
+            width: 100%;
+        }
+
+        .desc {
+            padding-bottom: 28px;
+        }
+    }
 </style>
 <div class="intro-container">
     <div class="subheader-container content-container">
@@ -237,11 +302,13 @@
                 for the greater good of accessible and sustainable technology.
             </p>
             <div class="socials">
-                <LinkButton link="#join" text="JOIN LUG" />
-                <LinkSocial link="#" icon="discord" />
-                <LinkSocial link="#" icon="instagram" />
-                <LinkSocial link="#" icon="github" />
-                <LinkSocial link="#" icon="email" />
+                <LinkButton link="#join" text="JOIN LUG" mobile_full_size=1 />
+                <div>
+                    <LinkSocial link="https://discord.gg/Edrb8ASX7m" icon="discord" />
+                    <LinkSocial link="#" icon="instagram" />
+                    <LinkSocial link="#" icon="github" />
+                    <LinkSocial link="#" icon="email" />
+                </div>
             </div>
         </div>
         <div class="logo-container">
@@ -273,9 +340,9 @@
         <div class="groups-overview">
             <h2>Our groups:</h2>
             <div class="groups-container">
-                <div>
+                <a href="/ctf">
                     <div class="group-image">
-                        <img src="https://placehold.co/320x320" alt="cube" />
+                        <img src="https://placehold.co/320x320" alt="ctf" />
                     </div>
                     <div>
                         <h3>CTF Group</h3>
@@ -283,8 +350,8 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
-                </div>
-                <div>
+                </a>
+                <a href="/cubing">
                     <div class="group-image">
                         <img src="https://placehold.co/320x320" alt="cube" />
                     </div>
@@ -294,10 +361,10 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
-                </div>
-                <div>
+                </a>
+                <a href="/homebrew">
                     <div class="group-image">
-                        <img src="https://placehold.co/320x320" alt="cube" />
+                        <img src="https://placehold.co/320x320" alt="homebrew" />
                     </div>
                     <div>
                         <h3>Homebrew Group</h3>
@@ -305,7 +372,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <!-- <div class="projects-overview">
@@ -341,7 +408,7 @@
             <img src="https://placehold.co/64x64" alt="icon" />
             <h2 id="calendar">Events Calendar</h2>
         </div>
-        <EventsCalendar />
+        <EventsCalendar count=16 />
     </div>
     <div class="articles-container content-container">
         <div class="icon-header">
@@ -368,8 +435,9 @@
             <div class="footer-social">
                 Find us on
                 <a href="#">GitHub</a>
-                <a href="#">Discord</a>
+                <a href="https://discord.gg/Edrb8ASX7m">Discord</a>
                 <a href="#">Instagram</a>
+                <a href="#">Email</a>
             </div>
         </div>
     </div>

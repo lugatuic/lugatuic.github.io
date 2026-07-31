@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
 
     let props = $props();
+    const count = props.count;
     let eventsList = $state([]);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -14,6 +15,9 @@
 
     onMount(async () => {
         eventsList = await (await fetch("/data/events.json")).json();
+        if (count != -1) {
+            eventsList = eventsList.slice(0, count);
+        }
     });
 </script>
 <style>
@@ -53,6 +57,18 @@
 
     .no-events-label {
         margin: 32px;
+    }
+
+    @media screen and (width < 1024px) {
+        .calendar-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (width < 768px) {
+        .calendar-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 </style>
 <div class="calendar">

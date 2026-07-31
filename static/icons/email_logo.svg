@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="email_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#3ce4ad"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4912879"
+     inkscape:cx="81.808484"
+     inkscape:cy="180.71628"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1592"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     id="rect1"
+     style="fill:#ffffff;stroke-width:0.314067"
+     inkscape:label="rect1"
+     d="m 7.5675227,17.693445 34.7837623,26.906368 7.648717,5.915918 7.678601,-5.93969 L 92.43248,17.693445 Z M 1.25e-6,22.308667 V 76.916186 L 33.017199,47.847676 Z m 99.99999775,0 -32.989566,25.517305 32.989566,29.081946 z M 60.301665,53.01532 52.815338,58.806697 a 4.3649543,4.0004 0 0 1 -5.630673,0 L 39.723712,53.037024 6.4781517,82.306555 H 93.530309 Z" />
+  <path
+     id="path13"
+     style="display:none;fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="m 99.824294,13.696474 1e-4,72.60976 M 0.17570825,13.696474 v 72.60976 M 0.16938124,13.693766 50.000002,55.749387 99.830619,13.693766 Z M 59.617226,47.632324 50.00005,55.749094 40.410167,47.655492 0.17570825,86.306234 H 99.824394 Z"
+     sodipodi:insensitive="true" />
+</svg>

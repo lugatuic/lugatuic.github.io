@@ -9,10 +9,17 @@
 
     onMount(async () => {
         articlesList = await (await fetch("/data/articles.json")).json();
-        articlesList = articlesList.slice(0, count);
+        if (count != -1) {
+            articlesList = articlesList.slice(0, count);
+        }
     });
 </script>
 <style>
+    .articles {
+        display: flex;
+        flex-direction: column;
+    }
+
     .articles-container {
         margin: 32px 0px 32px 0px;
         display: flex;
@@ -63,6 +70,6 @@
                 </a>
             {/each}
         </div>
-        <LinkButton link="/articles" text="See All" />
+        <LinkButton link="/articles" text="See All" mobile_full_size=1 />
     {/if}
 </div>
