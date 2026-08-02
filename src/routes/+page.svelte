@@ -10,20 +10,18 @@
         font-family: "Inter", sans-serif;
     }
 
+    h1, h2, h3 {
+        font-family: "IBM Plex Mono", monospace;
+    }
+
     h1 {
         padding-bottom: 32px;
         margin: 0px;
         font-size: 48px;
-        font-family: "IBM Plex Mono", monospace;
     }
 
     h2 {
-        font-family: "IBM Plex Mono", monospace;
         margin: 0px;
-    }
-    
-    h3 {
-        font-family: "IBM Plex Mono", monospace;
     }
 
     p, li {
@@ -44,12 +42,6 @@
     .icon-header > img {
         height: 48px;
         width: 48px;
-    }
-
-    .content-container {
-        max-width: 1024px;
-        margin: auto;
-        padding: 0px 32px 0px 32px;
     }
 
     .desc {
@@ -416,6 +408,7 @@
             <h2 id="articles">Recent Articles</h2>
         </div>
         <ArticlesList count=5 />
+        <LinkButton link="/articles" text="See All" mobile_full_size=1 />
     </div>
     <div class="main-page-footer">
         <div>

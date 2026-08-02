@@ -15,6 +15,10 @@
     });
 </script>
 <style>
+    * {
+        font-family: "Inter", sans-serif;
+    }
+
     .articles {
         display: flex;
         flex-direction: column;
@@ -70,6 +74,5 @@
                 </a>
             {/each}
         </div>
-        <LinkButton link="/articles" text="See All" mobile_full_size=1 />
     {/if}
 </div>
