@@ -54,8 +54,21 @@
 
     .intro-container {
         width: 100%;
+        position: relative;
         padding-top: 64px;
-        background-color: green;
+        padding-bottom: 64px;
+    }
+
+    .subheader-background {
+        top: 0px;
+        /* background-color: var(--light-background); */
+        background-image: url("/images/cherry.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
     }
 
     .subheader-container {
@@ -63,7 +76,14 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 32px;
-        padding-bottom: 64px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: var(--light-color);
+
+        /* unsure if to keep the blur or solid background */
+        /* background-color: var(--dark-background); */
+        backdrop-filter: blur(24px);
+        border-radius: 16px;
     }
 
     .subheader-container > .logo-container {
@@ -284,6 +304,7 @@
     }
 </style>
 <div class="intro-container">
+    <div class="subheader-background"></div>
     <div class="subheader-container content-container">
          <div>
             <h1>Linux User Group @ UIC</h1>

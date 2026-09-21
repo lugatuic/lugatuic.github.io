@@ -1,19 +1,21 @@
 # lug.cs.uic.edu
-## New Website Goals
-- As minimal as possible.
-- Prefer text, ASCII.
-- Link images instead of embed for fastest possible load time.
-- **Absolutely no JavaScript**
+Work in progress redesign of the LUG website.
+## Usage
+### Environment setup
+```bash
+# If using NVM
+nvm install 26
+npm install
+```
+Note: project does not seem to build correctly using versions below 26.
 
-## Quick Contribution Guide
+### Development preview
+```bash
+npm run dev
+```
 
-Follow the [guide](https://lug.cs.uic.edu/contributing.html). Or, if you know
-how to contribute already:
-
-- Add pandoc compatible files (currently `.md` or `.org`)
-	to `content/`
-- Files in `content/static/` will be available at `/static/` on the
-	domain.
-
-## License
-MIT
+### Static site generation
+```bash
+npm run build
+```
+Uses `@sveltejs/adapter-static`.

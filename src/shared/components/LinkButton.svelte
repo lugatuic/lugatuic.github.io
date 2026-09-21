@@ -11,15 +11,15 @@
         transition: 250ms;
         position: relative;
         cursor: pointer;
-        background: yellow;
+        background: var(--accent-yellow);
         border: none;
         text-decoration: none;
         text-align: center;
-        color: var(--background);
+        color: var(--dark-color);
     }
 
     .link-button:hover {
-        background: orange;
+        background: var(--accent-orange);
     }
 
     @media screen and (width < 768px) {

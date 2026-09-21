@@ -24,7 +24,7 @@
     .calendar {
         margin-top: 32px;
         width: 100%;
-        background-color: green;
+        background-color: var(--border-gray);
     }
 
     .calendar-container {
@@ -35,7 +35,7 @@
 
     .event {
         padding: 8px;
-        background-color: yellow;
+        background-color: var(--light-background);
     }
 
     .event-date {
@@ -85,6 +85,10 @@
                         <div class="event-host">{event.host}</div>
                     </div>
                 {/if}
+            {/each}
+            <!-- Fix if some events are not rendered due to being past -->
+            {#each {length: 4 - eventsList.length % 4} as _, i}
+                    <div class="event"></div>
             {/each}
         {/if}
     </div>
